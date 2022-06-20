@@ -8,6 +8,14 @@
     width: 10rem;
 }
 
-.active {
+.navbar-nav .show > .nav-link, .navbar-nav .nav-link.active {
     color: #12C2E9;
+}
+
+.search {
+    width: 50%;
+}
+
+.search-btn {
+   border: 1px solid linear-gradient(red, yellow, blue) 
 }

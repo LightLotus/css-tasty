@@ -13,22 +13,22 @@
   </head>
   <body>
     <header>
-      <nav class="container navbar navbar-expand-lg bg-light">
+      <nav class="container navbar navbar-expand-md bg-light">
         <img id="css-tasty-logo" src="./images/CSS-Tasty-logo.svg" alt="" />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="container-fluid p-0">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 border w-100">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
@@ -36,24 +36,29 @@
                 <a class="nav-link" aria-current="page" href="#">Docs</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">CSS References</a>
+                <a class="nav-link" aria-current="page" href="#"
+                  >CSS References</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#"
+                  >Videos</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="#">Guides</a>
               </li>
             </ul>
+            <form class="d-flex search" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="search-btn btn w-50" type="submit">Search</button>
+            </form>
           </div>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </nav>
     </header>
