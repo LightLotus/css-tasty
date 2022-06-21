@@ -6,6 +6,10 @@
   font-family: "Roboto", sans-serif;
 }
 /* header section */
+
+header {
+  background-image: linear-gradient(to right, #c471ed, #f64f59);
+}
 #css-tasty-logo {
   width: 10rem;
 }
@@ -28,6 +32,7 @@
   border-color: transparent;
   background-image: linear-gradient(to right, #c471ed, #f64f59);
   color: #fff;
+  border: none;
 }
 
 .hero-content {
@@ -49,4 +54,30 @@
 
 #component-img {
   transform: scaleX(-1);
+}
+
+/* footer section */
+footer {
+  background-color: #393e46;
+}
+ul li {
+  list-style-type: none;
+}
+.footer-nav-links {
+  text-decoration: none;
+  color: #12c2e9;
+  transition: 0.3s;
+}
+
+.footer-nav-links:hover {
+  color: #fff;
+}
+
+.footer-social-media-icons i {
+  font-size: 1.5rem;
+  color: #12c2e9;
+}
+
+.footer-social-media-icons i:hover {
+  color: #fff;
 }

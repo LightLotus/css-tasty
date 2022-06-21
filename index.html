@@ -8,6 +8,13 @@
       rel="stylesheet"
       href="./bootstrap-5.2.0-beta1-dist/css/bootstrap.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <title>CSS Tasty</title>
   </head>
@@ -15,7 +22,9 @@
     <header>
       <div class="bg-light">
         <nav class="container navbar navbar-expand-md">
-          <a href="#"><img id="css-tasty-logo" src="./images/CSS-Tasty-logo.svg" alt="" /></a>
+          <a href="#"
+            ><img id="css-tasty-logo" src="./images/CSS-Tasty-logo.svg" alt=""
+          /></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -110,7 +119,48 @@
         </div>
       </div>
     </section>
-    <footer>This is the footer</footer>
+    <footer>
+      <div class="container p-0 py-5 d-flex justify-contents-space-between">
+        <a href="#"
+          ><img id="css-tasty-logo" src="./images/CSS-Tasty-logo.svg" alt=""
+        /></a>
+        <ul>
+          <li><a class="footer-nav-links" href="#">Home</a></li>
+          <li><a class="footer-nav-links" href="#">Docs</a></li>
+          <li><a class="footer-nav-links" href="#">CSS Refences</a></li>
+          <li><a class="footer-nav-links" href="#">Video</a></li>
+          <li><a class="footer-nav-links" href="#">Guides</a></li>
+        </ul>
+        <ul>
+          <li><a class="footer-nav-links" href="#">Terms of Services</a></li>
+          <li><a class="footer-nav-links" href="#">Copyright @ 2022</a></li>
+        </ul>
+        <ul>
+          <li class="footer-social-media-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          </li>
+          <li class="footer-social-media-icons">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li class="footer-social-media-icons">
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          </li>
+          <li class="footer-social-media-icons">
+            <a href="#"><i class="fa-brands fa-discord"></i></a>
+          </li>
+        </ul>
+        <form>
+          <div style="color: #fff;">Subscribe to our owesome newsletter!</div>
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="search-btn btn w-50" type="submit" style="color: #fff;">Subscribe</button>
+        </form>
+      </div>
+    </footer>
     <script src="./bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.js"></script>
   </body>
 </html>
