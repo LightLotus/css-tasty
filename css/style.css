@@ -1,21 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+/* #c471ed - purple color */
 
 * {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-
+ /* header section */
 #css-tasty-logo {
-    width: 10rem;
+  width: 10rem;
 }
 
-.navbar-nav .show > .nav-link, .navbar-nav .nav-link.active {
-    color: #12C2E9;
+.navbar-nav .show > .nav-link,
+.navbar-nav .nav-link.active {
+  color: #12c2e9;
 }
 
 .search {
-    width: 50%;
+  width: 50%;
 }
 
 .search-btn {
-   border: 1px solid linear-gradient(red, yellow, blue) 
+  border: 1px solid #12c2e9;
+  transition: all 0.3s ease-out;
+}
+
+.search-btn:hover {
+  border-color: transparent;
+  background-image: linear-gradient(to right, #12c2e9, #c471ed);
+  color: #fff;
+}
+
+.hero-text {
+    text-align: center;
 }
