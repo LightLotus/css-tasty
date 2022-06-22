@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 
-/* #c471ed - purple color */
-
 * {
   font-family: "Roboto", sans-serif;
 }
+
 /* header section */
 
 header {
-  background-image: linear-gradient(to right, #c471ed, #f64f59);
+  background-image: linear-gradient(to right, #12c2e9, #c471ed);
 }
+
 #css-tasty-logo {
   width: 10rem;
 }
@@ -19,41 +19,31 @@ header {
   color: #12c2e9;
 }
 
-.search {
-  width: 50%;
+.hero-cta {
+  border: 1px solid #fff;
+  width: 15%;
+  color: #fff;
+  transition: 0.3s;
 }
 
-.search-btn {
-  border: 1px solid #12c2e9;
-  transition: all 0.3s ease-out;
-}
-
-.search-btn:hover {
-  border-color: transparent;
-  background-image: linear-gradient(to right, #c471ed, #f64f59);
+.hero-cta:hover {
+  background-image: linear-gradient(90deg, #c471ed, #f64f59);
   color: #fff;
   border: none;
+
 }
 
 .hero-content {
   height: 100vh;
 }
 
+.hero-content .row {
+  height: 80vh;
+}
+
 .hero-text {
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: 5rem;
   font-weight: 500;
-}
-.hero-cta {
-  color: #12c2e9;
-  transition: 0.3s;
-}
-
-.hero-cta:hover {
-  color: #f64f59;
-}
-
-#component-img {
-  transform: scaleX(-1);
 }
 
 /* footer section */
@@ -63,6 +53,12 @@ footer {
 ul li {
   list-style-type: none;
 }
+
+footer .d-flex {
+  justify-content: space-between;
+  align-items: center;
+}
+
 .footer-nav-links {
   text-decoration: none;
   color: #12c2e9;
@@ -80,4 +76,9 @@ ul li {
 
 .footer-social-media-icons i:hover {
   color: #fff;
+}
+
+#copyright {
+  color: rgba(255, 255, 255, 0.489);
+  font-size: 0.8rem;
 }

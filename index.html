@@ -38,7 +38,7 @@
           </button>
           <div class="container-fluid p-0">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mx-auto mb-2 mb-lg-0 py-3">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 py-3">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#"
                     >Home</a
@@ -59,7 +59,7 @@
                   <a class="nav-link" aria-current="page" href="#">Guides</a>
                 </li>
               </ul>
-              <form class="d-flex search" role="search">
+              <!-- <form class="d-flex search" role="search">
                 <input
                   class="form-control me-2"
                   type="search"
@@ -69,96 +69,61 @@
                 <button class="search-btn btn w-50" type="submit">
                   Search
                 </button>
-              </form>
+              </form> -->
             </div>
           </div>
         </nav>
       </div>
-      <div class="container hero-content my-5 p-0">
-        <div class="row">
-          <div class="col-md-6">
-            <h1 class="hero-text">Learn to style</h1>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum, autem accusamus maxime laudantium delectus minima
-              atque placeat sit eligendi. Porro dicta voluptate aspernatur,
-              tempore nisi maxime quaerat harum cumque recusandae.
-            </p>
-            <a class="hero-cta" href="#">Don't know where to start?</a>
-          </div>
-          <div class="col-md-6">
-            <img
-              class="container-fluid w-75"
-              src="./images/undraw_designer_life_re_6ywf.svg"
-              alt=""
-            />
-          </div>
+      <div class="container hero-content text-center text-light p-0">
+        <div class="my-5">
+          <h1 class="hero-text">Learn how to style</h1>
+          <p class="mx-auto w-50">
+            CCS Tasty is a free resource and reference guide to help all you
+            need to know about CSS. It comes with documentations and videos to
+            provide you learn things in different ways.
+          </p>
+          <a class="btn border-light hero-cta shadow" href="#">Get Started</a>
         </div>
       </div>
     </header>
-    <section>
-      <div class="container hero-content p-0">
+    <footer>
+      <div class="container p-0 py-5">
         <div class="row">
-          <div class="col-md-6">
-            <div class="hero-text">
-              CSS design language for styling webpages
+          <div class="col-sm-12 d-flex">
+            <a href="#"
+              ><img
+                id="css-tasty-logo"
+                src="./images/CSS-Tasty-logo.svg"
+                alt=""
+            /></a>
+            <div class="d-flex">
+              <a class="footer-social-media-icons" href="#"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a class="footer-social-media-icons" href="#"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a class="footer-social-media-icons" href="#"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a class="footer-social-media-icons" href="#"
+                ><i class="fa-brands fa-discord"></i
+              ></a>
             </div>
-            <div class="d-flex gap-3 my-5">
-              <a class="hero-cta" href="#">Learn CSS</a>
-              <a class="hero-cta" href="#">CSS References</a>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <img
-              id="component-img"
-              class="container-fluid"
-              src="./images/undraw_design_components_9vy6.svg"
-              alt=""
-            />
           </div>
         </div>
-      </div>
-    </section>
-    <footer>
-      <div class="container p-0 py-5 d-flex justify-contents-space-between">
-        <a href="#"
-          ><img id="css-tasty-logo" src="./images/CSS-Tasty-logo.svg" alt=""
-        /></a>
-        <ul>
-          <li><a class="footer-nav-links" href="#">Home</a></li>
-          <li><a class="footer-nav-links" href="#">Docs</a></li>
-          <li><a class="footer-nav-links" href="#">CSS Refences</a></li>
-          <li><a class="footer-nav-links" href="#">Video</a></li>
-          <li><a class="footer-nav-links" href="#">Guides</a></li>
-        </ul>
-        <ul>
-          <li><a class="footer-nav-links" href="#">Terms of Services</a></li>
-          <li><a class="footer-nav-links" href="#">Copyright @ 2022</a></li>
-        </ul>
-        <ul>
-          <li class="footer-social-media-icons">
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          </li>
-          <li class="footer-social-media-icons">
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          </li>
-          <li class="footer-social-media-icons">
-            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-          </li>
-          <li class="footer-social-media-icons">
-            <a href="#"><i class="fa-brands fa-discord"></i></a>
-          </li>
-        </ul>
-        <form>
-          <div style="color: #fff;">Subscribe to our owesome newsletter!</div>
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="search-btn btn w-50" type="submit" style="color: #fff;">Subscribe</button>
-        </form>
+        <div class="row">
+          <div class="col-sm-12 d-flex">
+            <div class="d-flex p-0">
+              <a class="footer-nav-links" href="#">Home</a>
+              <a class="footer-nav-links" href="#">Docs</a>
+              <a class="footer-nav-links" href="#">CSS Refences</a>
+              <a class="footer-nav-links" href="#">Video</a>
+              <a class="footer-nav-links" href="#">Guides</a>
+            </div>
+            <div id="copyright">©2022 CSS.Candy. All Rights Reserved</div>
+          </div>
+        </div>
       </div>
     </footer>
     <script src="./bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.js"></script>
