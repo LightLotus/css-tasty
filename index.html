@@ -19,47 +19,44 @@
     <title>CSS Tasty</title>
   </head>
   <body>
-    <header>
-      <div class="bg-light">
-        <nav class="container navbar navbar-expand-md">
-          <a href="#"
-            ><img id="css-tasty-logo" src="./images/CSS-Tasty-logo.svg" alt=""
-          /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="container-fluid p-0">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 py-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#">Docs</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#"
-                    >CSS References</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#">Videos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#">Guides</a>
-                </li>
-              </ul>
-              <!-- <form class="d-flex search" role="search">
+    <header class="bg-light">
+      <nav class="container navbar navbar-expand-md">
+        <a href="#"
+          ><img id="css-tasty-logo" src="./images/CSS-Tasty-logo.svg" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container-fluid p-0">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 py-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Docs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#"
+                  >CSS References</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Videos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Guides</a>
+              </li>
+            </ul>
+            <!-- <form class="d-flex search" role="search">
                 <input
                   class="form-control me-2"
                   type="search"
@@ -70,14 +67,15 @@
                   Search
                 </button>
               </form> -->
-            </div>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
+    </header>
+    <section>
       <div class="container hero-content text-center text-light p-0">
-        <div class="my-5">
+        <div class="py-5">
           <h1 class="hero-text">Learn how to style</h1>
-          <p class="mx-auto w-50">
+          <p class="hero-paragraph mx-auto">
             CCS Tasty is a free resource and reference guide to help all you
             need to know about CSS. It comes with documentations and videos to
             provide you learn things in different ways.
@@ -85,18 +83,31 @@
           <a class="btn border-light hero-cta shadow" href="#">Get Started</a>
         </div>
       </div>
-    </header>
+    </section>
     <footer>
       <div class="container p-0 py-5">
-        <div class="row">
-          <div class="col-sm-12 d-flex">
+        <div class="row p-0">
+          <div class="col-md-6">
             <a href="#"
               ><img
                 id="css-tasty-logo"
                 src="./images/CSS-Tasty-logo.svg"
                 alt=""
             /></a>
-            <div class="d-flex">
+          </div>
+          <div class="col-md-6">
+            <div class="footer-nav d-flex justify-content-between ms-auto">
+              <a class="footer-nav-links" href="#">Home</a>
+              <a class="footer-nav-links" href="#">Docs</a>
+              <a class="footer-nav-links" href="#">CSS Refences</a>
+              <a class="footer-nav-links" href="#">Video</a>
+              <a class="footer-nav-links" href="#">Guides</a>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3 p-0">
+          <div class="col-md-6">
+            <div class="footer-social-media d-flex justify-content-between">
               <a class="footer-social-media-icons" href="#"
                 ><i class="fa-brands fa-facebook-f"></i
               ></a>
@@ -111,20 +122,49 @@
               ></a>
             </div>
           </div>
+          <div class="col-md-6">
+            <div class="d-flex justify-content-end">
+              <div id="copyright">©2022 CSS.Candy. All Rights Reserved</div>
+            </div>
+          </div>
         </div>
+      </div>
+      <!-- <div class="container p-0 py-5">
         <div class="row">
-          <div class="col-sm-12 d-flex">
-            <div class="d-flex p-0">
+          <div class="col-md-6">
+            <a href="#"
+              ><img
+                id="css-tasty-logo"
+                src="./images/CSS-Tasty-logo.svg"
+                alt=""
+            /></a>
+            <div>
               <a class="footer-nav-links" href="#">Home</a>
               <a class="footer-nav-links" href="#">Docs</a>
               <a class="footer-nav-links" href="#">CSS Refences</a>
               <a class="footer-nav-links" href="#">Video</a>
               <a class="footer-nav-links" href="#">Guides</a>
             </div>
+          </div>
+          <div class="col-md-6">
+            <div>
+              <a class="footer-social-media-icons" href="#"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a class="footer-social-media-icons" href="#"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a class="footer-social-media-icons" href="#"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a class="footer-social-media-icons" href="#"
+                ><i class="fa-brands fa-discord"></i
+              ></a>
+            </div>
             <div id="copyright">©2022 CSS.Candy. All Rights Reserved</div>
           </div>
         </div>
-      </div>
+      </div> -->
     </footer>
     <script src="./bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.js"></script>
   </body>

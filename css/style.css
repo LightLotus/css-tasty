@@ -6,17 +6,28 @@
 
 /* header section */
 
-header {
+section {
   background-image: linear-gradient(to right, #12c2e9, #c471ed);
+  height: 100vh;
 }
 
 #css-tasty-logo {
   width: 10rem;
+  display: block;
 }
 
 .navbar-nav .show > .nav-link,
 .navbar-nav .nav-link.active {
   color: #12c2e9;
+}
+
+.hero-text {
+  font-size: 5rem;
+  font-weight: 500;
+}
+
+.hero-paragraph {
+  width: 60%;
 }
 
 .hero-cta {
@@ -30,33 +41,15 @@ header {
   background-image: linear-gradient(90deg, #c471ed, #f64f59);
   color: #fff;
   border: none;
-
-}
-
-.hero-content {
-  height: 100vh;
-}
-
-.hero-content .row {
-  height: 80vh;
-}
-
-.hero-text {
-  font-size: 5rem;
-  font-weight: 500;
 }
 
 /* footer section */
 footer {
   background-color: #393e46;
 }
-ul li {
-  list-style-type: none;
-}
 
-footer .d-flex {
-  justify-content: space-between;
-  align-items: center;
+.footer-nav {
+  width: 75%;
 }
 
 .footer-nav-links {
@@ -67,6 +60,10 @@ footer .d-flex {
 
 .footer-nav-links:hover {
   color: #fff;
+}
+
+.footer-social-media {
+  width: 25%;
 }
 
 .footer-social-media-icons i {
@@ -81,4 +78,39 @@ footer .d-flex {
 #copyright {
   color: rgba(255, 255, 255, 0.489);
   font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 600px) {
+  header,
+  section,
+  footer {
+    padding: 0 1.5rem;
+  }
+
+  .hero-text {
+    font-size: 3rem;
+  }
+
+  .hero-paragraph {
+    margin: 2rem 0;
+    width: 100%;
+  }
+
+  .hero-cta {
+    width: 80%;
+  }
+
+  .footer-social-media,
+  #copyright,
+  #css-tasty-logo {
+    margin: 1rem auto;
+  }
+
+  .footer-nav {
+    width: 100%;
+  }
+  
+  .footer-social-media {
+    width: 50%;
+  }
 }
