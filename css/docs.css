@@ -4,11 +4,23 @@
   font-family: "Roboto", sans-serif;
 }
 
-/* header section */
+.header-menu {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
 
-section {
-  background-image: linear-gradient(to right, #12c2e9, #c471ed);
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.side-scroll-section ul {
+  width: 20vw;
+  padding: 0 1rem;
   height: 100vh;
+}
+
+.side-scroll-section ul li {
+  list-style-type: none;
 }
 
 #css-tasty-logo {
@@ -16,34 +28,22 @@ section {
   display: block;
 }
 
-.navbar-nav .show > .nav-link,
-.navbar-nav .nav-link.active {
-  color: #12c2e9;
-}
-
-.hero-text {
-  font-size: 5rem;
-  font-weight: 500;
-}
-
-.hero-paragraph {
-  width: 60%;
-}
-
-.hero-cta {
-  border: 1px solid #fff;
+.search-btn {
+  border: 1px solid #12c2e9;
   width: 15%;
-  color: #fff;
+  color: #12c2e9;
   transition: 0.3s;
   margin-top: 1.5rem;
 }
 
-.hero-cta:hover {
+.hero-cta:hover,
+.search-btn:hover {
   background-image: linear-gradient(90deg, #c471ed, #f64f59);
   color: #fff;
   border: none;
 }
 
+/* side scroll nav section */
 /* footer section */
 footer {
   background-color: #393e46;
@@ -83,7 +83,6 @@ footer {
 
 @media only screen and (max-width: 600px) {
   header,
-  section,
   footer {
     padding: 0 1.5rem;
   }
@@ -110,7 +109,7 @@ footer {
   .footer-nav {
     width: 100%;
   }
-  
+
   .footer-social-media {
     width: 50%;
   }
