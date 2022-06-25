@@ -29,6 +29,7 @@
   background-color: #fff;
   color: #12c2e9;
   transition: 0.3s;
+  width: 6rem;
 }
 
 .btn:hover {
@@ -114,25 +115,22 @@ footer {
   footer {
     padding: 0 1.5rem;
   }
-  .second-nav .navbar .second-nav-items {
+
+  .navbar-toggler {
     position: fixed;
-    top: 10%;
+    top: 0;
     left: 0;
-    z-index: 1;
-    background-color: #fff;
+    transform: translate(50%, 150%);
+    z-index: 999;
   }
 
   .lesson-items {
-    width: 100vw;
-    margin: 1rem 0;
+    width: 50vw;
+    position: absolute;
+    top: 0;
+    margin-left: 2rem;
   }
 
-  .navbar-toggler {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: translateX(50%);
-  }
   /* footer section */
 
   .footer-social-media,
