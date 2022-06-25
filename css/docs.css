@@ -123,12 +123,15 @@ footer {
   }
 
   .lesson-items {
-    width: 50vw;
+    width: 100vw;
     margin: 1rem 0;
   }
 
-  .navbar button {
-    margin-left: calc(100%-12px);
+  .navbar-toggler {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translateX(50%);
   }
   /* footer section */
 
