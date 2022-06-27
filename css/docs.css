@@ -116,6 +116,9 @@ footer {
     padding: 0 1.5rem;
   }
 
+  .lesson-items {
+    width: 60vw;
+  }
   /* footer section */
   .footer-social-media,
   #copyright,
