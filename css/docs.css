@@ -35,9 +35,8 @@ span i {
   position: fixed;
   top: 0;
   left: 0;
-  background-image: linear-gradient(90deg, #12c2e9, #c471ed);
+  background: linear-gradient(90deg, #12c2e9, #c471ed);
   height: 100vh;
-  width: 30vw;
   padding: 1rem;
 }
 
@@ -47,7 +46,9 @@ span i {
 
 .lesson-title {
   padding: 0.5rem 1rem;
+  font-weight: bold;
 }
+
 /* anchor tags */
 .lesson-items .nav-lessons {
   display: block;
@@ -106,7 +107,8 @@ footer {
 }
 
 @media (max-width: 950px) {
-  header,
+  .top-nav,
+  main,
   footer {
     padding: 0 1.5rem;
   }
