@@ -37,15 +37,12 @@ span i {
   left: 0;
   background: linear-gradient(90deg, #12c2e9, #c471ed);
   height: 100vh;
-  padding: 1rem;
-}
-
-.lesson-items li {
-  list-style-type: none;
+  width: 30vw;
 }
 
 .lesson-title {
-  padding: 0.5rem 1rem;
+  display: block;
+  padding: 1rem 0 1rem 3rem;
   font-weight: bold;
 }
 
@@ -54,7 +51,7 @@ span i {
   display: block;
   text-decoration: none;
   color: #000;
-  padding: 0.5rem 1rem;
+  padding: 1rem 0 1rem 3rem;
   transition: 0.3rem;
 }
 
@@ -67,6 +64,12 @@ span i {
 /* main section */
 main {
   margin-top: 20vh;
+  margin-bottom: 4rem;
+}
+
+.breadcrumb li a {
+  color: #12c2e9;
+  text-decoration: none;
 }
 
 /* footer section */
