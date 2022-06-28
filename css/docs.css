@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -35,10 +35,8 @@ span i:hover {
   align-items: center;
 }
 
-.dropdown-burger {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.dropdown {
+  margin-bottom: 1rem;
 }
 
 .dropdown-burger span {
@@ -74,6 +72,15 @@ span i:hover {
   color: #fff;
 }
 
+.lesson-items .nav-lessons:last-child {
+  margin-bottom: 3rem;
+}
+
+.lesson-items hr {
+  width: 80%;
+  margin: auto;
+}
+
 .nav-lessons:hover,
 .nav-lessons:active,
 .nav-lessons:focus {
@@ -98,18 +105,20 @@ main {
   color: #fff;
 }
 
-.CSS-lesson-title {
+/* main content */
+.git-lesson-title {
   font-weight: 500;
+  margin: 1rem 0;
 }
+
 .example-code {
   width: fit-content;
 }
 
-.code-content {
+.code-content li {
+  list-style-type: none;
   font-family: "Roboto Mono", monospace;
-  background-color: #f2f2f2;
-  padding: 1rem;
-  color: #4e944f;
+  color: #393e46;
 }
 
 /* footer section */
