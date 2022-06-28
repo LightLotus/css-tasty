@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+#css-tasty-logo {
+  width: 10rem;
+  display: block;
+}
+
+.navbar-nav .show > .nav-link,
+.navbar-nav .nav-link.active {
+  color: #12c2e9;
+}
+
+/* header section */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/* section section */
+section {
+  background-image: linear-gradient(to right, #12c2e9, #c471ed);
+}
+
+section .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4rem;
+}
+
+.card .btn {
+  border: 1px solid #12c2e9;
+  background-color: #fff;
+}
+
+.card .btn:hover {
+  color: #fff;
+  border: transparent;
+  background-image: linear-gradient(to right, #12c2e9, #c471ed);
+}
+
+/* footer section */
+footer {
+  background-color: #393e46;
+}
+
+.footer-nav {
+  width: 50%;
+}
+
+.footer-nav-links {
+  text-decoration: none;
+  color: #12c2e9;
+  transition: 0.3s;
+}
+
+.footer-nav-links:hover {
+  color: #fff;
+}
+
+.footer-social-media {
+  width: 25%;
+}
+
+.footer-social-media-icons i {
+  font-size: 1.5rem;
+  color: #12c2e9;
+}
+
+.footer-social-media-icons i:hover {
+  color: #fff;
+}
+
+#copyright {
+  color: rgba(255, 255, 255, 0.489);
+  font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 600px) {
+  header,
+  section,
+  footer {
+    padding: 0 1.5rem;
+  }
+
+  section .container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-social-media,
+  #copyright,
+  #css-tasty-logo {
+    margin: 1rem auto;
+  }
+
+  .footer-nav {
+    width: 100%;
+  }
+
+  .footer-social-media {
+    width: 50%;
+  }
+}
