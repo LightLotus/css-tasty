@@ -110,14 +110,40 @@ iframe {
   display: block;
   margin: 1rem auto 2rem;
 }
-
+.main-title {
+  text-align: center;
+}
 .git-lesson-title {
   font-weight: 500;
   margin: 1rem 0;
 }
 
 .example-code {
-  width: fit-content;
+  padding: 1rem;
+  background-color: #2c3639;
+  color: #12c2e9;
+  font-family: "Roboto Mono", monospace;
+}
+
+.note-content {
+  padding: 2rem;
+  background-color: #12c2e98c;
+  width: 50vw;
+}
+
+.command-terms {
+  font-family: "Roboto Mono", monospace;
+  color: #12c2e9;
+}
+
+.file-emp {
+  font-weight: bold;
+  color: #F64F59;
+}
+
+a[href="https://www.git-scm.com/"]
+{
+  color: #12c2e9;
 }
 
 .code-content li {

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../documentation-css/git-documentation.css" />
+    <title>Tasty Git | Initialize a Repository</title>
+  </head>
+  <body>
+    <nav class="top-nav bg-light">
+      <div class="nav-container container p-0">
+        <a href="../index.html"
+          ><img id="css-tasty-logo" src="../images/CSS-Tasty-logo.svg" alt=""
+        /></a>
+        <span
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseWidthExample"
+          aria-expanded="false"
+          aria-controls="collapseWidthExample"
+          ><i class="fa-solid fa-bars"></i
+        ></span>
+      </div>
+    </nav>
+    <div class="collapse collapse-horizontal" id="collapseWidthExample">
+      <div class="lesson-items overflow-auto">
+        <span class="lesson-title">Git Tutorial</span>
+        <a class="nav-lessons" href="../docs.html">Git Intro</a>
+        <a class="nav-lessons" href="../documentation/git-install.html"
+          >Git How to Install</a
+        >
+        <a class="nav-lessons" href="../documentation/git-repository.html"
+          >Git Repository</a
+        >
+        <a class="nav-lessons" href="../documentation/git-staging.html"
+          >Git Staging Environment</a
+        >
+        <a class="nav-lessons" href="../documentation/git-commit.html"
+          >Git Commit</a
+        >
+        <a class="nav-lessons" href="../documentation/git-branch.html"
+          >Git Branch</a
+        >
+        <a class="nav-lessons" href="#">Git Branch Merge</a>
+        <hr />
+        <span class="lesson-title">Git and GitHub</span>
+        <a class="nav-lessons" href="#">GitHub Get Started</a>
+        <a class="nav-lessons" href="#">GitHub Edit Code</a>
+        <a class="nav-lessons" href="#">Pull from GitHub</a>
+        <a class="nav-lessons" href="#">Push to GitHub</a>
+        <a class="nav-lessons" href="#">GitHub Branch</a>
+        <a class="nav-lessons" href="#">Pull Branch from GitHub</a>
+        <a class="nav-lessons" href="#">Push Branch to GitHub</a>
+        <a class="nav-lessons" href="#">GitHub Pages</a>
+        <hr />
+        <span class="lesson-title">Git Contribute</span>
+        <a class="nav-lessons" href="#">GitHub Fork</a>
+        <a class="nav-lessons" href="#">Git Clone from GitHub</a>
+        <a class="nav-lessons" href="#">GitHub Send Pull Request</a>
+        <hr />
+        <span class="lesson-title">Git Advanced</span>
+        <a class="nav-lessons" href="#">Git .gitignore</a>
+        <a class="nav-lessons" href="#">Git Security SSH</a>
+        <a class="nav-lessons" href="#">GitHub Add SSH</a>
+        <a class="nav-lessons" href="#">Git Undo</a>
+        <a class="nav-lessons" href="#">Git Revert</a>
+        <a class="nav-lessons" href="#">Git Reset</a>
+        <a class="nav-lessons" href="#">Git Amend</a>
+        <hr />
+        <span class="lesson-title">References</span>
+        <a class="nav-lessons" href="./references.html"
+          >Git Command References</a
+        >
+      </div>
+    </div>
+    <main>
+      <div class="main-content container p-0">
+        <div class="dropdown">
+          <button
+            class="btn dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Menu
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="../index.html">Home</a></li>
+            <li><a class="dropdown-item" href="../guides.html">Guides</a></li>
+            <li>
+              <a class="dropdown-item" href="../references.html"
+                >Git Refences</a
+              >
+            </li>
+          </ul>
+        </div>
+        <hr />
+        <h2 class="main-title">Git Repository</h2>
+        <p class="git-lesson-title fs-5">Create Git Folder</p>
+        <p>
+          Before we initialize a repository, we have to make a directory to work
+          with our files. Let's try to create a new folder for our project:
+        </p>
+        <p class="example-code">$ mkdir my-project</p>
+        <p class="example-code">$ cd my-project</p>
+        <p>
+          <span class="command-terms">mkdir</span> - makes new directory <br />
+          <span class="command-terms">cd</span> - changes the current working
+          directory
+        </p>
+        <p>
+          Now that we are in the correct directory. We can start by initializing
+          Git!
+        </p>
+        <p class="note-content">
+          <strong>Note:</strong> If you already have a folder/directory you
+          would like to use for Git: Navigate to it in command line, or open it
+          in your file explorer, right-click and select "Git Bash here"
+        </p>
+        <p class="git-lesson-title fs-5">Initialize a Git Repository</p>
+        <p>
+          Once you have navigated to your correct folder, you can initialize Git
+          on that folder:
+        </p>
+        <p class="example-code">
+          $ git init <br />
+          Initialized empty Git repository in /Users/user/myproject/.git/
+        </p>
+        <p>You just created your first Git Repository!</p>
+        <p class="note-content">
+          <strong>Note: </strong>Git now knows that it should watch the folder
+          you initiated it on. Git creates a hidden folder to keep track of
+          changes.
+        </p>
+        <hr />
+        <p class="git-lesson-title fs-5">Adding new files</p>
+        <p>
+          You just created your first local repo and it's empty. Say we want to
+          add some files, or create new file using your favorite text editor
+          then save it or move it to the folder you created.
+        </p>
+        <p>
+          For this example, I am going to make a simple HTML File like this:
+        </p>
+        <div class="example-code">
+          &lt;!DOCTYPE html&gt;<br />
+          &lt;html&gt;<br />
+          &lt;head&gt;<br />
+          &lt;title&gt;Hello World!&lt;/title&gt;<br />
+          &lt;/head&gt;<br />
+          &lt;body&gt;<br />
+          &lt;h1&gt;Hello world!&lt;/h1&gt;<br />
+          &lt;p&gt;This is the first file in my new Git Repo.&lt;/p&gt;<br />
+          &lt;/body&gt;<br />
+          &lt;/html&gt;<br />
+        </div>
+        <br />
+        <p>
+          and save it to our new folder as
+          <strong style="color: #12c2e9; margin-top: 1rem">index.html</strong>
+        </p>
+        <p>
+          Let's go back to the terminal and list the files in our current
+          working directory:
+        </p>
+        <p class="example-code">$ ls <br />index.html</p>
+        <p>
+          <span class="command-terms">ls</span> will <strong>list</strong> the
+          files in the directory. We can see that
+          <strong style="color: #12c2e9; margin-top: 1rem">index.html</strong>
+          is there. Then we check the Git status and see if it is a part of our
+          repo:
+        </p>
+        <p class="example-code">
+          $ git status <br />
+          On branch master <br />
+          <br />
+          No commits yet <br />
+          Untracked files: <br />
+          &emsp;(use "git add ..." to include in what will be committed)<br />
+          &emsp; index.html <br /><br />
+          nothing added to commit but untracked files present (use "git add" to
+          track)
+        </p>
+        <p>
+          Now Git is aware of the file, but has not added it to our repository!
+        </p>
+        <p>Files in your Git repository folder can be in one of 2 states:</p>
+        <ul>
+          <li>
+            Tracked - files that Git knows about and are added to the repository
+          </li>
+          <li>
+            Untracked - files that are in your working directory, but not added
+            to the repository
+          </li>
+        </ul>
+        <p>
+          When you first add files to an empty repository, they are all
+          untracked. To get Git to track them, you need to stage them, or add
+          them to the staging environment.
+        </p>
+      </div>
+    </main>
+    <footer>
+      <div class="container p-0 py-5">
+        <div class="row p-0">
+          <div class="col-md-6">
+            <a href="../index.html"
+              ><img
+                id="css-tasty-logo"
+                src="../images/CSS-Tasty-logo.svg"
+                alt=""
+            /></a>
+          </div>
+          <div class="col-md-6">
+            <div class="footer-nav d-flex justify-content-between ms-auto">
+              <a class="footer-nav-links" href="../index.html">Home</a>
+              <a class="footer-nav-links" href="../docs.html">Docs</a>
+              <a class="footer-nav-links" href="../references.html"
+                >Git Refences</a
+              >
+              <a class="footer-nav-links" href="../guides.html">Guides</a>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3 p-0">
+          <div class="col-md-6">
+            <div class="footer-social-media d-flex justify-content-between">
+              <a class="footer-social-media-icons" href="#"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a class="footer-social-media-icons" href="#"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a class="footer-social-media-icons" href="#"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a class="footer-social-media-icons" href="#"
+                ><i class="fa-brands fa-discord"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex justify-content-end">
+              <div id="copyright">©2022 CSS.Candy. All Rights Reserved</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
