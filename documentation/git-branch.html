@@ -151,7 +151,7 @@
           $ git checkout hello-world-images <br />
           Switched to branch 'hello-world-images'
         </div>
-        <br>
+        <br />
         <p>
           Branches allow you to work on different parts of a project without
           impacting the main branch. When the work is complete, a branch can be
@@ -160,11 +160,24 @@
           Branching in Git is very lightweight and fast!
         </p>
         <hr />
-        <p class="git-lesson-title fs-5">Creating Remote Branches</p>
+        <p class="git-lesson-title fs-5">Creating Remote Branches in Git</p>
         <p>
           So far, we only demonstrated local branch operations. In order to
           operate on remote branches, a remote repo must first be configured and
-          added to the local repo config.
+          added to the local repo config. You can push an existing local branch
+          and thereby publish it on a remote repository.
+        </p>
+        <p>
+          With the correct local branch
+          <span class="command-terms">checkout</span> , you can publish it on a
+          remote repository - thereby "creating" it on that remote:
+        </p>
+        <div class="example-code">$ git push -u origin &lt;branch-name&gt;</div>
+        <br />
+        <p>
+          Please mind the <span class="command-terms">"-u"</span> option: it
+          establishes a "tracking relationship" between the existing local and
+          the new remote branch.
         </p>
       </div>
     </main>

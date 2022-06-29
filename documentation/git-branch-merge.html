@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../documentation-css/git-documentation.css" />
+    <title>Tasty Git | Git Branch Merge</title>
+  </head>
+  <body>
+    <nav class="top-nav bg-light">
+      <div class="nav-container container p-0">
+        <a href="../index.html"
+          ><img id="css-tasty-logo" src="../images/CSS-Tasty-logo.svg" alt=""
+        /></a>
+        <span
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseWidthExample"
+          aria-expanded="false"
+          aria-controls="collapseWidthExample"
+          ><i class="fa-solid fa-bars"></i
+        ></span>
+      </div>
+    </nav>
+    <div class="collapse collapse-horizontal" id="collapseWidthExample">
+      <div class="lesson-items overflow-auto">
+        <span class="lesson-title">Git Tutorial</span>
+        <a class="nav-lessons" href="../docs.html">Git Intro</a>
+        <a class="nav-lessons" href="../documentation/git-install.html"
+          >Git How to Install</a
+        >
+        <a class="nav-lessons" href="../documentation/git-repository.html"
+          >Git Repository</a
+        >
+        <a class="nav-lessons" href="../documentation/git-staging.html"
+          >Git Staging Environment</a
+        >
+        <a class="nav-lessons" href="../documentation/git-commit.html"
+          >Git Commit</a
+        >
+        <a class="nav-lessons" href="../documentation/git-branch.html"
+          >Git Branch</a
+        >
+        <a class="nav-lessons" href="#">Git Branch Merge</a>
+        <hr />
+        <span class="lesson-title">Git and GitHub</span>
+        <a class="nav-lessons" href="#">GitHub Get Started</a>
+        <a class="nav-lessons" href="#">GitHub Edit Code</a>
+        <a class="nav-lessons" href="#">Pull from GitHub</a>
+        <a class="nav-lessons" href="#">Push to GitHub</a>
+        <a class="nav-lessons" href="#">GitHub Branch</a>
+        <a class="nav-lessons" href="#">Pull Branch from GitHub</a>
+        <a class="nav-lessons" href="#">Push Branch to GitHub</a>
+        <a class="nav-lessons" href="#">GitHub Pages</a>
+        <hr />
+        <span class="lesson-title">Git Contribute</span>
+        <a class="nav-lessons" href="#">GitHub Fork</a>
+        <a class="nav-lessons" href="#">Git Clone from GitHub</a>
+        <a class="nav-lessons" href="#">GitHub Send Pull Request</a>
+        <hr />
+        <span class="lesson-title">Git Advanced</span>
+        <a class="nav-lessons" href="#">Git .gitignore</a>
+        <a class="nav-lessons" href="#">Git Security SSH</a>
+        <a class="nav-lessons" href="#">GitHub Add SSH</a>
+        <a class="nav-lessons" href="#">Git Undo</a>
+        <a class="nav-lessons" href="#">Git Revert</a>
+        <a class="nav-lessons" href="#">Git Reset</a>
+        <a class="nav-lessons" href="#">Git Amend</a>
+        <hr />
+        <span class="lesson-title">References</span>
+        <a class="nav-lessons" href="./references.html"
+          >Git Command References</a
+        >
+      </div>
+    </div>
+    <main>
+      <div class="main-content container p-0">
+        <div class="dropdown">
+          <button
+            class="btn dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Menu
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="../index.html">Home</a></li>
+            <li><a class="dropdown-item" href="../guides.html">Guides</a></li>
+            <li>
+              <a class="dropdown-item" href="../references.html"
+                >Git Refences</a
+              >
+            </li>
+          </ul>
+        </div>
+        <hr />
+        <!-- main content starts here -->
+
+        <h2 class="main-title">Git Branch Merge</h2>
+        <p class="git-lesson-title fs-5">Merging Branches</p>
+        <p>
+          We have the emergency fix ready, and so let's merge the master and
+          emergency-fix branches. First, we need to change to the master branch:
+        </p>
+        <div class="example-code">
+          $ git checkout master <br />
+          Switched to branch 'master'
+        </div>
+        <br />
+        <p>
+          Now we <span class="command-terms">&emsp;merge </span> the current
+          branch (master) with emergency-fix:
+        </p>
+        <div class="example-code">
+          $ git merge emergency-fix <br />
+          Updating 09f4acd..dfa79db <br />
+          Fast-forward <br />
+          &emsp;index.html | 2 +- <br />
+          &emsp;1 file changed, 1 insertion(+), 1 deletion(-)
+        </div>
+        <br />
+        <p>
+          Since the emergency-fix branch came directly from master, and no other
+          changes had been made to master while we were working, Git sees this
+          as a continuation of master. So it can "Fast-forward", just pointing
+          both master and emergency-fix to the same commit.
+        </p>
+        <p>
+          As master and emergency-fix are essentially the same now, we can
+          delete emergency-fix, as it is no longer needed:
+        </p>
+        <div class="example-code">
+          $ git branch -d emergency-fix <br />
+          Deleted branch emergency-fix (was dfa79db). <br />
+        </div>
+        <hr />
+        <p class="git-lesson-title fs-5">Merge Conflict</p>
+        <p>
+          Now we can move over to hello-world-images and keep working. Add
+          another image file (img_hello_git.jpg) and change index.html, so it
+          shows it:
+        </p>
+        <div class="example-code">
+          $ git checkout hello-world-images <br />
+          Switched to branch 'hello-world-images' <br />
+        </div>
+        <br />
+        <div class="example-code">
+          &lt;!DOCTYPE html&gt; <br />
+          &lt;html&gt; <br />
+          &lt;head&gt; <br />
+          &lt;title>Hello World!&lt;/title&gt; <br />
+          &lt;link rel="stylesheet" href="bluestyle.css"/&gt; <br />
+          &lt;/head&gt; <br />
+          &lt;body&gt; <br />
+          <br />
+          &lt;h1>Hello world!&lt;/h1&gt; <br />
+          &lt;div&gt; <br />
+          &lt;img src="img_hello_world.jpg" alt="Hello World from Space"
+          style="width: 100%; max-width: 960px"/&gt; <br />
+          &lt;/div&gt; <br />
+          &lt;p>This is the first file in my new Git Repo.&lt;/p&gt; <br />
+          &lt;p>A new line in our file!&lt;/p&gt; <br />
+          &lt;div&gt; <br />
+          &lt;img src="img_hello_git.jpg" alt="Hello Git" style="width: 100%;
+          max-width: 640px"/&gt; <br />
+          &lt;/div&gt; <br />
+          <br />
+          &lt;/body&gt; <br />
+          &lt;/html&gt; <br />
+        </div>
+        <br />
+        <p>
+          Now, we are done with our work here and can stage and commit for this
+          branch:
+        </p>
+        <div class="example-code">
+          $ git add --all <br />
+          $ git commit -m "added new image" <br />
+          [hello-world-images 1f1584e] added new image <br />
+          2 files changed, 1 insertion(+) <br />
+          create mode 100644 img_hello_git.jpg <br />
+        </div>
+        <br />
+        <p>
+          We see that index.html has been changed in both branches. Now we are
+          ready to merge hello-world-images into master. But what will happen to
+          the changes we recently made in master?
+        </p>
+        <div class="example-code">
+          $ git checkout master <br />
+          $ git merge hello-world-images <br />
+          Auto-merging index.html <br />
+          CONFLICT (content): Merge conflict in index.html <br />
+          Automatic merge failed; fix conflicts and then commit the result.
+        </div>
+        <br />
+        <p>
+          The merge failed, as there is conflict between the versions for
+          index.html. Let us check the status:
+        </p>
+        <div class="example-code">
+          $ git status <br />
+          On branch master <br />
+          You have unmerged paths. <br />
+          &emsp;(fix conflicts and run "git commit") <br />
+          &emsp;(use "git merge --abort" to abort the merge) <br /><br />
+          Changes to be committed: <br />
+          &emsp;&emsp;new file: img_hello_git.jpg <br />
+          &emsp;&emsp;new file: img_hello_world.jpg <br /><br />
+          Unmerged paths: <br />
+          &emsp;(use "git add ..." to mark resolution) <br />
+          &emsp;&emsp;both modified: index.html
+        </div>
+        <br />
+        <div>
+          <p class="example-code">
+            &lt;!DOCTYPE html&gt; <br />
+            &lt;html&gt; <br />
+            &lt;head&gt; <br />
+            &lt;title>Hello World!&lt;/title&gt; <br />
+            &lt;link rel="stylesheet" href="bluestyle.css"/&gt; <br />
+            &lt;/head&gt; <br />
+            &lt;body&gt; <br /><br />
+
+            &lt;h1&gt;Hello world!&lt;/h1&gt; <br />
+            &lt;div&gt;&lt;img src="img_hello_world.jpg" alt="Hello World from
+            Space" style="width:100%;max-width:960px"&gt;&lt;/div&gt; <br />
+            &lt;p&gt;This is the first file in my new Git Repo.&lt;/p&gt; <br />
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD <br />
+            &lt;p&gt;This line is here to show how merging works.&lt;/p&gt;
+            <br />
+            ======= <br />
+            &lt;p&gt;A new line in our file!&lt;/p&gt; <br />
+            &lt;div&gt;&lt;img src="img_hello_git.jpg" alt="Hello Git"
+            style="width:100%;max-width:640px"&gt;&lt;/div&gt; <br />
+            &gt;&gt;&gt;&gt;&gt;&gt;&gt; hello-world-images <br /><br />
+
+            &lt;/body&gt;<br />
+            &lt;/html&gt;<br />
+          </p>
+        </div>
+        <p>
+          We can see the differences between the versions and edit it like we
+          want:
+        </p>
+        <div>
+          <p class="example-code">
+            &lt;!DOCTYPE html&gt; <br />
+            &lt;html&gt; <br />
+            &lt;head&gt; <br />
+            &lt;title>Hello World!&lt;/title&gt; <br />
+            &lt;link rel="stylesheet" href="bluestyle.css"/&gt; <br />
+            &lt;/head&gt; <br />
+            &lt;body&gt; <br /><br />
+
+            &lt;h1&gt;Hello world!&lt;/h1&gt; <br />
+            &lt;div&gt;&lt;img src="img_hello_world.jpg" alt="Hello World from
+            Space" style="width:100%;max-width:960px"&gt;&lt;/div&gt; <br />
+            &lt;p&gt;This is the first file in my new Git Repo.&lt;/p&gt; <br />
+            &lt;p&gt;This line is here to show how merging works.&lt;/p&gt;<br />
+            &lt;div&gt; <br />&lt;img src="img_hello_git.jpg" alt="Hello Git"
+            style="width:100%;max-width:640px"&gt; <br />&lt;/div&gt;
+            <br /><br />
+            &lt;/body&gt;<br />
+            &lt;/html&gt;<br />
+          </p>
+        </div>
+        <p>Now we can stage index.html and check the status:</p>
+        <div>
+          <div class="example-code">
+            $ git add index.html <br />
+            $ git status <br />
+            On branch master <br />
+            All conflicts fixed but you are still merging. <br />
+            &emsp;(use "git commit" to conclude merge) <br />
+            <br />
+
+            Changes to be committed: <br />
+            &emsp;&emsp;new file: img_hello_git.jpg <br />
+            &emsp;&emsp;new file: img_hello_world.jpg <br />
+            &emsp;&emsp;modified: index.html
+          </div>
+        </div>
+        <br />
+        <p>
+          The conflict has been fixed, and we can use commit to conclude the
+          merge:
+        </p>
+        <div>
+          <div class="example-code">
+            $ git commit -m "merged with hello-world-images after fixing
+            conflicts" <br />
+            [master e0b6038] merged with hello-world-images after fixing
+            conflicts <br />
+          </div>
+        </div>
+        <br />
+        <p>And delete the hello-world-images branch:</p>
+        <div>
+          <div class="example-code">
+            $ git branch -d hello-world-images <br />
+            Deleted branch hello-world-images (was 1f1584e). <br />
+          </div>
+        </div>
+        <br />
+        <p>
+          Now you have a better understanding of how branches and merging works.
+          Time to start working with a remote repository!
+        </p>
+      </div>
+    </main>
+    <footer>
+      <div class="container p-0 py-5">
+        <div class="row p-0">
+          <div class="col-md-6">
+            <a href="../index.html"
+              ><img
+                id="css-tasty-logo"
+                src="../images/CSS-Tasty-logo.svg"
+                alt=""
+            /></a>
+          </div>
+          <div class="col-md-6">
+            <div class="footer-nav d-flex justify-content-between ms-auto">
+              <a class="footer-nav-links" href="../index.html">Home</a>
+              <a class="footer-nav-links" href="../docs.html">Docs</a>
+              <a class="footer-nav-links" href="../references.html"
+                >Git Refences</a
+              >
+              <a class="footer-nav-links" href="../guides.html">Guides</a>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3 p-0">
+          <div class="col-md-6">
+            <div class="footer-social-media d-flex justify-content-between">
+              <a class="footer-social-media-icons" href="#"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a class="footer-social-media-icons" href="#"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a class="footer-social-media-icons" href="#"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a class="footer-social-media-icons" href="#"
+                ><i class="fa-brands fa-discord"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex justify-content-end">
+              <div id="copyright">©2022 CSS.Candy. All Rights Reserved</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
