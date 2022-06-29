@@ -138,7 +138,7 @@ iframe {
 
 .file-emp {
   font-weight: bold;
-  color: #F64F59;
+  color: #f64f59;
 }
 
 a[href="https://www.git-scm.com/"]
@@ -195,7 +195,7 @@ footer {
   footer {
     padding: 0 1.5rem;
   }
-
+  /* main content */
   iframe {
     width: 100%;
   }
@@ -203,6 +203,11 @@ footer {
   .lesson-items {
     width: 70vw;
   }
+
+  .note-content {
+    width: 100%;
+  }
+  
   /* footer section */
   .footer-social-media,
   #copyright,
