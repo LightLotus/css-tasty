@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="./bootstrap-5.2.0-beta1-dist/css/bootstrap.css"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
     />
     <link
       rel="stylesheet"
@@ -15,16 +17,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/docs.css" />
-    <title>Tasty Git | Git Introduction</title>
+    <link rel="stylesheet" href="../documentation-css/git-documentation.css" />
+    <title>Tasty Git | GitHub Introduction</title>
   </head>
   <body>
     <nav class="top-nav bg-light">
       <div class="nav-container container p-0">
-        <a href="./index.html"
-          ><img id="css-tasty-logo" src="./images/CSS-Tasty-logo.svg" alt=""
+        <a href="../index.html"
+          ><img id="css-tasty-logo" src="../images/CSS-Tasty-logo.svg" alt=""
         /></a>
-
         <span
           type="button"
           data-bs-toggle="collapse"
@@ -37,20 +38,29 @@
     </nav>
     <div class="collapse collapse-horizontal" id="collapseWidthExample">
       <div class="lesson-items overflow-auto">
-        <!-- lesson menu items starts here -->
         <span class="lesson-title">Git Tutorial</span>
-        <a class="nav-lessons" href="./docs.html">Git Intro</a>
-        <a class="nav-lessons" href="./documentation/git-started.html"
+        <a class="nav-lessons" href="../docs.html">Git Intro</a>
+        <a class="nav-lessons" href="../documentation/git-install.html"
           >Git How to Install</a
         >
-        <a class="nav-lessons" href="./documentation/git-repository.html">Git Repository</a>
-        <a class="nav-lessons" href="./documentation/git-staging.html">Git Staging Environment</a>
-        <a class="nav-lessons" href="./documentation/git-commit.html">Git Commit</a>
-        <a class="nav-lessons" href="./documentation/git-branch.html">Git Branch</a>
-        <a class="nav-lessons" href="./documentation/git-branch.html">Git Branch Merge</a>
+        <a class="nav-lessons" href="../documentation/git-repository.html"
+          >Git Repository</a
+        >
+        <a class="nav-lessons" href="../documentation/git-staging.html"
+          >Git Staging Environment</a
+        >
+        <a class="nav-lessons" href="../documentation/git-commit.html"
+          >Git Commit</a
+        >
+        <a class="nav-lessons" href="../documentation/git-branch.html"
+          >Git Branch</a
+        >
+        <a class="nav-lessons" href="./git-branch-merge.html"
+          >Git Branch Merge</a
+        >
         <hr />
         <span class="lesson-title">Git and GitHub</span>
-        <a class="nav-lessons" href="./documentation/github-intro.html">GitHub Get Started</a>
+        <a class="nav-lessons" href="./github-intro.html">GitHub Get Started</a>
         <a class="nav-lessons" href="#">GitHub Edit Code</a>
         <a class="nav-lessons" href="#">Pull from GitHub</a>
         <a class="nav-lessons" href="#">Push to GitHub</a>
@@ -92,108 +102,95 @@
             Menu
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="./index.html">Home</a></li>
-            <li><a class="dropdown-item" href="./guides.html">Guides</a></li>
+            <li><a class="dropdown-item" href="../index.html">Home</a></li>
+            <li><a class="dropdown-item" href="../guides.html">Guides</a></li>
             <li>
-              <a class="dropdown-item" href="./references.html">Git Refences</a>
+              <a class="dropdown-item" href="../references.html"
+                >Git Refences</a
+              >
             </li>
           </ul>
         </div>
         <hr />
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/2ReR1YJrNOM"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
 
-        <h2 style="text-align: center">Git Introduction</h2>
-        <p class="git-lesson-title fs-5">What is Git?</p>
-        <p>
-          Git is a distributed version control system that helps you track your
-          code changes.
-        </p>
-        <p>
-          When doing a group project, every developer gets their local
-          repository with full commit history. The commit history makes Git
-          fast, as now a network connection is not needed to create commits or
-          perform diffs between commits
-        </p>
-        <hr />
-        <p class="git-lesson-title fs-5">It is used for:</p>
-        <ul>
-          <li>Tracking code changes</li>
-          <li>Tracking who made changes</li>
-          <li>Coding collaboration</li>
-        </ul>
-        <hr />
-        <p class="git-lesson-title fs-5">What does Git do?</p>
-        <ul>
-          <li>Manage projects with Repositories</li>
-          <li>Clone a project to work on a local copy</li>
-          <li>Control and track changes with Staging and Committing</li>
-          <li>
-            Branch and Merge to allow for work on different parts and versions
-            of a project
-          </li>
-          <li>Pull the latest version of the project to a local copy</li>
-          <li>Push local updates to the main project</li>
-        </ul>
-        <hr />
+        <!-- main content starts here -->
+        <h2 class="main-title">GitHub Introduction</h2>
         <p class="git-lesson-title fs-5">What is GitHub?</p>
         <ul>
-          <li>GitHub is different from Git.</li>
+          <li>GitHub is a Git repository platform used for code sharing.</li>
           <li>
-            GitHub is a popular distributed version control platform to help
-            developers collaborate with each other remotely.
-          </li>
-          <li>Developers can share their codes using GitHub.</li>
-          <li>
-            You cannot use GitHub without Git but you can use Git without
-            GitHub.
+            It helps every team member work together on a project from anywhere,
+            making it easy to collaborate.
           </li>
         </ul>
-        <hr />
-        <p class="git-lesson-title fs-5">Different Commands in Git</p>
-        <ul class="code-content">
-          <li>Git config</li>
-          <li>Git init</li>
-          <li>Git add</li>
-          <li>Git diff</li>
-          <li>Git commit</li>
-          <li>Git reset</li>
-          <li>Git status</li>
-          <li>Git merge</li>
-          <li>Git push</li>
-          <li>Git pull</li>
-        </ul>
+        <p class="git-lesson-title fs-5">Getting started with GitHub</p>
         <p>
-          We will go over the Git commands in detail later in this tutorial.
+          Go to
+          <a class="reference-links" href="https://github.com/">GitHub</a> and
+          signup for an account.
         </p>
+        <p class="note-content">
+          <strong>Note: </strong>Remember to use the same e-mail address you
+          used in the Git config.
+        </p>
+
+        <hr />
+        <p class="git-lesson-title fs-5">Creating a Repository on GitHub</p>
+        <p>After signing up a GitHub Account, you can now create a new Repo:</p>
+        <img
+          class="w-100"
+          src="../images/create-a-repository-github.png"
+          alt=""
+        />
+        <br />
+        <br />
+        <hr />
+        <p>and fill in the relevant details:</p>
+        <img
+          src="../images/fill-in-details-repository-github.png"
+          alt=""
+          class="w-100"
+        />
+        <br />
+        <br />
+        <hr />
+        <p>Then click the "Create repository" button</p>
+        <img
+          src="../images/click-create-repository-button-github.png"
+          alt=""
+          class="w-100"
+        />
+        <br /><br />
+        <p>
+          In the example above, I named my repository "hello-world". You can
+          choose "Public" if you want anyone to see your repository or "Private"
+          if you want to choose only those who can see and commit in the
+          repository. You can check the "Add a READ ME file" so you can write
+          description about what your project is all about.
+        </p>
+        <hr />
+        <p class="git-lesson-title fs-5">Push Local Repository to GitHub</p>
       </div>
     </main>
     <footer>
       <div class="container p-0 py-5">
         <div class="row p-0">
           <div class="col-md-6">
-            <a href="./index.html"
+            <a href="../index.html"
               ><img
                 id="css-tasty-logo"
-                src="./images/CSS-Tasty-logo.svg"
+                src="../images/CSS-Tasty-logo.svg"
                 alt=""
             /></a>
           </div>
           <div class="col-md-6">
             <div class="footer-nav d-flex justify-content-between ms-auto">
-              <a class="footer-nav-links" href="./index.html">Home</a>
-              <a class="footer-nav-links" href="./docs.html">Docs</a>
-              <a class="footer-nav-links" href="./references.html"
+              <a class="footer-nav-links" href="../index.html">Home</a>
+              <a class="footer-nav-links" href="../docs.html">Docs</a>
+              <a class="footer-nav-links" href="../references.html"
                 >Git Refences</a
               >
-              <a class="footer-nav-links" href="./guides.html">Guides</a>
+              <a class="footer-nav-links" href="../guides.html">Guides</a>
             </div>
           </div>
         </div>
@@ -222,7 +219,15 @@
         </div>
       </div>
     </footer>
-
-    <script src="./bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

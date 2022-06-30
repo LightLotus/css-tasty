@@ -146,6 +146,10 @@ a[href="https://www.git-scm.com/"]
   color: #12c2e9;
 }
 
+.reference-links {
+  color: #12c2e9;
+}
+
 .code-content li {
   list-style-type: none;
   font-family: "Roboto Mono", monospace;
