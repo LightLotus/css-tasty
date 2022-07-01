@@ -114,109 +114,171 @@
         <hr />
 
         <!-- main content starts here -->
-        <h2 class="main-title">GitHub Introduction</h2>
-        <p class="git-lesson-title fs-5">What is GitHub?</p>
-        <ul>
-          <li>GitHub is a Git repository platform used for code sharing.</li>
-          <li>
-            It helps every team member work together on a project from anywhere,
-            making it easy to collaborate.
-          </li>
-        </ul>
-        <p class="git-lesson-title fs-5">Getting started with GitHub</p>
-        <p>
-          Go to
-          <a class="reference-links" href="https://github.com/">GitHub</a> and
-          signup for an account.
+        <h2 class="main-title">Git Pull from GitHub</h2>
+        <p class="git-lesson-title fs-5">
+          What does <span class="command-terms">git pull</span> do?
         </p>
-        <p class="note-content">
-          <strong>Note: </strong>Remember to use the same e-mail address you
-          used in the Git config.
+        <p>
+          <span class="command-terms">git pull</span> is the most common way to
+          update your repository from GitHub. When you are working with a team,
+          it is important to stay updated with changes from the remote
+          repository.
         </p>
 
         <hr />
-        <p class="git-lesson-title fs-5">Creating a Repository on GitHub</p>
-        <p>After signing up a GitHub Account, you can now create a new Repo:</p>
-        <img
-          class="w-100"
-          src="../images/create-a-repository-github.png"
-          alt=""
-        />
-        <br />
-        <br />
-        <hr />
-        <p>and fill in the relevant details:</p>
-        <img
-          src="../images/fill-in-details-repository-github.png"
-          alt=""
-          class="w-100"
-        />
-        <br />
-        <br />
-        <hr />
-        <p>Then click the "Create repository" button</p>
-        <img
-          src="../images/click-create-repository-button-github.png"
-          alt=""
-          class="w-100"
-        />
-        <br /><br />
+        <p class="git-lesson-title fs-5">git pull and git fetch</p>
         <p>
-          In the example above, I named my repository "hello-world". You can
-          choose "Public" if you want anyone to see your repository or "Private"
-          if you want to choose only those who can see and commit in the
-          repository. You can check the "Add a READ ME file" so you can write
-          description about what your project is all about.
+          <span class="command-terms">git pull</span> is a combination of
+          <span class="command-terms">git fetch</span> +
+          <span class="command-terms">git merge</span>. Let's take a closer look
+          into how fetch, merge, and pull works.
         </p>
-        <hr />
-        <p class="git-lesson-title fs-5">Push Local Repository to GitHub</p>
+        <p class="git-lesson-title fs-5">Git Fetch</p>
         <p>
-          Since we have already set up a local Git repo, we are going to push
-          that to GitHub:
+          <span class="command-terms">git fetch</span> gets all the change
+          history of a tracked branch/repo. So, on your local Git, fetch updates
+          to see what has changed on GitHub:
         </p>
-        <img
-          src="../images/push-local-repository-github.png"
-          alt=""
-          class="w-100"
-        />
-        <p>Copy the URL, or click the clipboard marked in the image above.</p>
-        <p>Now paste it the following command:</p>
         <div class="example-code">
-          $ git remote add origin
-          https://github.com/WinesDev/hello-world.git
+          $ git fetch origin <br />
+          remote: Enumerating objects: 5, done. <br />
+          remote: Counting objects: 100% (5/5), done. <br />
+          remote: Compressing objects: 100% (3/3), done. <br />
+          remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 <br />
+          Unpacking objects: 100% (3/3), 733 bytes | 3.00 KiB/s, done. <br />
+          From https://github.com/WinesDev/hello-world.git <br />
+          &emsp; e0b6038..d29d69f master -> origin/master
         </div>
         <br />
         <p>
-          <span class="command-terms">git remote add origin [URL]</span>
-          specifies that you are adding a remote repository, with the specified
-          URL, as an <span class="command-terms">origin</span> to your local Git
-          repo.
-        </p>
-        <p>
-          Now we are going to push our master branch to the origin url, and set
-          it as the default remote branch:
+          Now that we have the recent changes, we can check our
+          <span class="command-terms">status</span>:
         </p>
         <div class="example-code">
-          $ git push origin master <br />
-          Enumerating objects: 22, done. <br />
-          Counting objects: 100% (22/22), done. <br />
-          Delta compression using up to 16 threads <br />
-          Compressing objects: 100% (22/22), done. <br />
-          Writing objects: 100% (22/22), 92.96 KiB | 23.24 MiB/s, done. <br />
-          Total 22 (delta 11), reused 0 (delta 0), pack-reused 0 <br />
-          remote: Resolving deltas: 100% (11/11), done. <br />
-          To https://github.com/WinesDev/hello-world.git <br />
-          &emsp; * [new branch] master -> master <br />
-          Branch 'master' set up to track remote branch 'master' from 'origin'.
+          $ git status <br />
+          On branch master <br />
+          Your branch is behind 'origin/master' by 1 commit, and can be
+          fast-forwarded. <br />
+          &emsp; (use "git pull" to update your local branch) <br />
+          <br />
+          nothing to commit, working tree clean
         </div>
         <br />
-        <p class="note-content">
-          <strong>Note:</strong> Since this is the first time you are connecting
-          to GitHub, you will get some kind of notification you to authenticate
-          this connection.
+        <p>
+          We are behind the <span class="terms">origin/master</span> by 1
+          <span class="command-terms">commit</span> . That should be the updated
+          <span class="file-emp">README.md</span> , but lets double check by
+          viewing the <span class="command-terms">log</span>:
+        </p>
+        <div class="example-code">
+          $ git log origin/master <br />
+          commit d29d69ffe2ee9e6df6fa0d313bb0592b50f3b853 (origin/master) <br />
+          Author: kevin-wines
+          &lt;77673807+kevin-wines@users.noreply.github.com&gt; <br />
+          Date: Fri Jul 01 14:59:14 2022 +0100 <br />
+          <br />
+          &emsp;Updated README.md with a line about GitHub <br />
+          <br />
+          commit e0b6038b1345e50aca8885d8fd322fc0e5765c3b (HEAD -> master)
+          <br />
+          Merge: dfa79db 1f1584e <br />
+          Author: kevin-wines <br />
+          Date: Fri Jul 01 12:42:56 2022 +0100 <br />
+          <br />
+          &emsp;merged with hello-world-images after fixing conflicts <br />
+          <br />
+          ... ... <br />
+        </div>
+        <br />
+        <p>
+          That looks as expected, but we can also verify by showing the
+          differences between our local <span>master</span> and
+          <span class="terms">origin/master:</span>
+        </p>
+        <div class="example-code">
+          $ git diff origin/master <br />
+          diff --git a/README.md b/README.md <br />
+          index 23a0122..a980c39 100644 <br />
+          --- a/README.md <br />
+          +++ b/README.md <br />
+          @@ -2,6 +2,4 @@ <br />
+          &emsp;Hello World repository for Git tutorial <br />
+          <br />
+          -This repository is built step by step in the tutorial. <br />
+          - <br />
+          -It now includes steps for GitHub <br />
+          +This repository is built step by step in the tutorial. <br />
+          \ No newline at end of file <br />
+        </div>
+        <br />
+        <p>
+          That looks precisely as expected! Now we can safely
+          <span class="command-terms">merge</span>.
+        </p>
+        <p class="git-lesson-title fs-5">Git Merge</p>
+        <p>
+          <span class="command-terms">merge </span>combines the current branch,
+          with a specified branch.
         </p>
         <p>
-          Now, go back into GitHub and see that the repository has been updated:
+          We have confirmed that the updates are as expected, and we can merge
+          our current branch <span class="terms">(master)</span> with
+          <span class="terms">origin/master:</span>
+        </p>
+        <div class="example-code">
+          $ git merge origin/master <br />
+          Updating e0b6038..d29d69f <br />
+          Fast-forward <br />
+          &emsp;README.md | 4 +++- <br />
+          &emsp;1 file changed, 3 insertions(+), 1 deletion(-) <br />
+        </div>
+        <br />
+        <p>
+          Check our <span class="terms">status</span> again to confirm we are up
+          to date:
+        </p>
+        <div class="example-code">
+          $ git status <br />
+          On branch master <br />
+          Your branch is up to date with 'origin/master'. <br />
+          <br />
+          nothing to commit, working tree clean <br />
+        </div>
+        <br />
+        <p>There! Your local git is up to date!</p>
+        <hr />
+        <p class="git-lesson-title fs-5">Git Pull</p>
+        <p>
+          But what if you just want to update your local repository, without
+          going through all those steps?
+        </p>
+        <p>
+          <span class="command-terms">pull</span> is a combination of
+          <span class="command-terms">fetch</span> and
+          <span class="command-terms"> merge</span>. It is used to pull all
+          changes from a remote repository into the branch you are working on.
+        </p>
+        <p>
+          Use <span class="command-terms">pull</span> to update our local Git:
+        </p>
+        <div class="example-code">
+          $ git pull origin <br />
+          remote: Enumerating objects: 5, done. <br />
+          remote: Counting objects: 100% (5/5), done. <br />
+          remote: Compressing objects: 100% (3/3), done. <br />
+          remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 <br />
+          Unpacking objects: 100% (3/3), 794 bytes | 1024 bytes/s, done. <br />
+          From https://github.com/WinesDev/hello-world.git <br />
+          &emsp;a7cdd4b..ab6b4ed master -> origin/master <br />
+          Updating a7cdd4b..ab6b4ed <br />
+          Fast-forward <br />
+          &emsp;README.md | 2 ++ <br />
+          &emsp;1 file changed, 2 insertions(+) <br />
+        </div>
+        <br />
+        <p>
+          That is how you keep your local Git up to date from a remote
+          repository.
         </p>
       </div>
     </main>

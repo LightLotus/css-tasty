@@ -150,6 +150,11 @@ a[href="https://www.git-scm.com/"]
   color: #12c2e9;
 }
 
+.terms {
+  font-family: "Roboto Mono", monospace;
+  color: #393e46;
+}
+
 .code-content li {
   list-style-type: none;
   font-family: "Roboto Mono", monospace;
@@ -211,7 +216,7 @@ footer {
   .note-content {
     width: 100%;
   }
-  
+
   /* footer section */
   .footer-social-media,
   #copyright,
