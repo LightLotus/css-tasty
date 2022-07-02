@@ -18,7 +18,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="../documentation-css/git-documentation.css" />
-    <title>Tasty Git | Git Get Started</title>
+    <title>Tasty Git | GitHub Introduction</title>
   </head>
   <body>
     <nav class="top-nav bg-light">
@@ -61,22 +61,12 @@
         <hr />
         <span class="lesson-title">Git and GitHub</span>
         <a class="nav-lessons" href="./github-intro.html">GitHub Get Started</a>
-        <a class="nav-lessons" href="./git-pull-from-github.html"
-          >Git Pull grom HitHub</a
-        >
-        <a class="nav-lessons" href="./git-push-to-github.html"
-          >Push to GitHub</a
-        >
-        <a class="nav-lessons" href="./git-branch-github.html">GitHub Branch</a>
-        <a class="nav-lessons" href="./pull-branch-from-github.html"
-          >Pull Branch from GitHub</a
-        >
-        <a class="nav-lessons" href="./push-branch-to-github.html"
-          >Push Branch to GitHub</a
-        >
-        <a class="nav-lessons" href="./github-flow.html"
-          >GitHub Flow</a
-        >
+        <a class="nav-lessons" href="#">GitHub Edit Code</a>
+        <a class="nav-lessons" href="#">Pull from GitHub</a>
+        <a class="nav-lessons" href="#">Push to GitHub</a>
+        <a class="nav-lessons" href="#">GitHub Branch</a>
+        <a class="nav-lessons" href="#">Pull Branch from GitHub</a>
+        <a class="nav-lessons" href="#">Push Branch to GitHub</a>
         <a class="nav-lessons" href="#">GitHub Pages</a>
         <hr />
         <span class="lesson-title">Git Contribute</span>
@@ -122,38 +112,44 @@
           </ul>
         </div>
         <hr />
-        <h2 class="main-title">Let's get started with Git!</h2>
-        <p class="git-lesson-title fs-5">Installing Git</p>
+
+        <!-- main content starts here -->
+        <h2 class="main-title">GitHub Branch</h2>
+        <p class="git-lesson-title fs-5">How to Create Branch in GitHub</p>
         <p>
-          Before you can start using Git, first you have to install it. You can
-          download Git for free from the following website:
-          <a href="https://www.git-scm.com/"> https://www.git-scm.com/</a>
+          On GitHub, access your repository and click the "master" branch
+          button.
         </p>
-        <p class="git-lesson-title fs-5">Using Git with Command Line</p>
         <p>
-          Open a terminal and verify the installation was successful by typing
-          git --version:
+          There you can create a new Branch. Type in a descriptive name, and
+          click Create branch:
         </p>
-        <p class="example-code">$ git --version</p>
-        <p>It will display what version you are currently installed.</p>
-        <p class="example-code">git version 2.36.1.windows.1</p>
+        <img src="../images/select-viewall-branches.png" alt="" class="w-100" />
         <p>
-          Configure your Git username and email using the following commands,
-          replacing Kevin's name with your own. Your email should be the same
-          when registering to GitHub. These details will be associated with any
-          commits that you create:
+          The branch should now be created and active. You can confirm which
+          branch you are working on by looking at the branch button. See that it
+          now says "html-skeleton" instead of "main"?
         </p>
-        <p class="example-code">
-          $ git config --global user.name "Kevin Wines"
+        <p>
+          Start working on an existing file in this branch. Click the
+          "index.html" file and start editing:
         </p>
-        <p class="example-code">
-          $ git config --global user.email "kevinwines1234@gmail.com"
+        <img
+          src="../images/create-branch-success-github.png"
+          alt=""
+          class="w-100"
+        />
+        <img src="../images/github-branch-edit-file.png" alt="" class="w-100" />
+        <p>
+          After you have finished editing the file, you can click the "Preview
+          changes" tab to see the changes you made highlighted
         </p>
-        <p class="note-content">
-          <strong>Note:</strong> "--global" is used to set your username and
-          user email globally. Meaning everytime you create a repository, it
-          will serve as the default username and email.
-        </p>
+        <img
+          src="../images/create-branch-github-save-changes.png"
+          alt=""
+          class="w-100"
+        />
+        <p>You now have a new branch on GitHub, updated with some changes!</p>
       </div>
     </main>
     <footer>

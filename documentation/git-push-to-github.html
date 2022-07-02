@@ -18,7 +18,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="../documentation-css/git-documentation.css" />
-    <title>Tasty Git | Git Get Started</title>
+    <title>Tasty Git | GitHub Introduction</title>
   </head>
   <body>
     <nav class="top-nav bg-light">
@@ -61,22 +61,12 @@
         <hr />
         <span class="lesson-title">Git and GitHub</span>
         <a class="nav-lessons" href="./github-intro.html">GitHub Get Started</a>
-        <a class="nav-lessons" href="./git-pull-from-github.html"
-          >Git Pull grom HitHub</a
-        >
-        <a class="nav-lessons" href="./git-push-to-github.html"
-          >Push to GitHub</a
-        >
-        <a class="nav-lessons" href="./git-branch-github.html">GitHub Branch</a>
-        <a class="nav-lessons" href="./pull-branch-from-github.html"
-          >Pull Branch from GitHub</a
-        >
-        <a class="nav-lessons" href="./push-branch-to-github.html"
-          >Push Branch to GitHub</a
-        >
-        <a class="nav-lessons" href="./github-flow.html"
-          >GitHub Flow</a
-        >
+        <a class="nav-lessons" href="#">GitHub Edit Code</a>
+        <a class="nav-lessons" href="#">Pull from GitHub</a>
+        <a class="nav-lessons" href="#">Push to GitHub</a>
+        <a class="nav-lessons" href="#">GitHub Branch</a>
+        <a class="nav-lessons" href="#">Pull Branch from GitHub</a>
+        <a class="nav-lessons" href="#">Push Branch to GitHub</a>
         <a class="nav-lessons" href="#">GitHub Pages</a>
         <hr />
         <span class="lesson-title">Git Contribute</span>
@@ -122,38 +112,114 @@
           </ul>
         </div>
         <hr />
-        <h2 class="main-title">Let's get started with Git!</h2>
-        <p class="git-lesson-title fs-5">Installing Git</p>
+
+        <!-- main content starts here -->
+        <h2 class="main-title">Git Push To GitHub</h2>
+        <p class="git-lesson-title fs-5">Git Push</p>
         <p>
-          Before you can start using Git, first you have to install it. You can
-          download Git for free from the following website:
-          <a href="https://www.git-scm.com/"> https://www.git-scm.com/</a>
+          <span class="command-terms">git push</span> uploads all local branch
+          commits to the corresponding remote branch.
         </p>
-        <p class="git-lesson-title fs-5">Using Git with Command Line</p>
+        <p>The general form of the command is this:</p>
+        <div class="example-code">$ git push &lt;remote&gt; &lt;branch&gt;</div>
+        <hr />
+        <p class="git-lesson-title fs-5">
+          What does <span class="command-terms">git push</span> do?
+        </p>
         <p>
-          Open a terminal and verify the installation was successful by typing
-          git --version:
+          <span class="command-terms">git push</span> updates the remote branch
+          from local commits. It is one of the four commands in Git that prompts
+          changes/interaction in the remote repository.
         </p>
-        <p class="example-code">$ git --version</p>
-        <p>It will display what version you are currently installed.</p>
-        <p class="example-code">git version 2.36.1.windows.1</p>
         <p>
-          Configure your Git username and email using the following commands,
-          replacing Kevin's name with your own. Your email should be the same
-          when registering to GitHub. These details will be associated with any
-          commits that you create:
+          When you made changes into your local repository, it only affects the
+          branch that you are currently working with. That is why it is a good
+          practice to <span class="command-terms">git status</span> to check
+          what specific <span class="terms">branch</span> you are on before
+          pushing to the remote.
         </p>
-        <p class="example-code">
-          $ git config --global user.name "Kevin Wines"
+        <hr />
+        <p>
+          For example, if your current branch is
+          <span class="terms">master</span>, the command
+          <span class="command-terms">git push</span> will supply the two
+          default parameters—effectively running:
+          <span class="command-terms">git push origin master</span> .
         </p>
-        <p class="example-code">
-          $ git config --global user.email "kevinwines1234@gmail.com"
+        <p>
+          In the example below, I'm going to push local commits to the remote
+          branch. But first I have to check what branch I'm currenly on using
+          <span class="command-terms">git status</span>:
         </p>
-        <p class="note-content">
-          <strong>Note:</strong> "--global" is used to set your username and
-          user email globally. Meaning everytime you create a repository, it
-          will serve as the default username and email.
+        <div class="example-code">
+          $ git status <br />
+          On branch master <br />
+          Your branch is up to date with 'origin/master'. <br />
+          <br />
+          Changes not staged for commit: <br />
+          &emsp;(use "git add &lt;file&gt;..." to update what will be committed)
+          <br />
+          &emsp;(use "git restore &lt;file&gt;..." to discard changes in working
+          directory) <br />
+          &emsp;&emsp;modified: documentation-css/git-documentation.css <br />
+          &emsp;&emsp;modified: documentation/git-started.html <br />
+          &emsp;&emsp;modified: documentation/github-intro.html <br />
+          <br />
+          Untracked files: <br />
+          &emsp;&emsp;(use "git add &lt;file&gt;..." to include in what will be
+          committed)
+          <br />
+          &emsp;&emsp;documentation/git-pull-from-github.html <br />
+          &emsp;&emsp;images/push-local-repository-github.png <br />
+        </div>
+        <br />
+        <p>
+          Now, we can see what branch we are on and the changes I have made in
+          my local repository. Next is I'm going to
+          <span class="command-terms">add</span> those changes and
+          <span class="command-terms">commit</span>:
         </p>
+        <div class="example-code">
+          $ git add . <br />
+
+          $ git commit -m "added git-pull tutorial module" <br />
+          [master 7b320b1] added git-pull tutorial module <br />
+          &emsp;5 files changed, 403 insertions(+), 4 deletions(-) <br />
+          &emsp;create mode 100644 documentation/git-pull-from-github.html
+          <br />
+          &emsp;create mode 100644 images/push-local-repository-github.png
+        </div>
+        <br />
+        <p>and check status again:</p>
+        <div class="example-code">
+          $ git status <br />
+          On branch master <br />
+          Your branch is up to date with 'origin/master'. <br />
+          <br />
+          nothing to commit, working tree clean <br />
+        </div>
+        <br />
+        <p>
+          Now it's ready to <span class="command-terms">push</span> changes to
+          our remote origin:
+        </p>
+        <div class="example-code">
+          $ git push origin master <br />
+          Enumerating objects: 17, done. <br />
+          Counting objects: 100% (17/17), done. <br />
+          Delta compression using up to 8 threads <br />
+          Compressing objects: 100% (9/9), done. <br />
+          Writing objects: 100% (10/10), 155.59 KiB | 9.72 MiB/s, done. <br />
+          Total 10 (delta 7), reused 0 (delta 0), pack-reused 0 <br />
+          remote: Resolving deltas: 100% (7/7), completed with 6 local objects.
+          <br />
+          remote: This repository moved. Please use the new location: <br />
+          remote: https://github.com/LightLotus/tasty-git.git <br />
+          To https://github.com/LightLotus/css-tasty.git <br />
+          &emsp;&emsp; 05ea34a..7b320b1 master -> master <br />
+        </div>
+        <br />
+        <p>Go to GitHub, and confirm that the repository has a new commit.</p>
       </div>
     </main>
     <footer>

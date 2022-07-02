@@ -18,7 +18,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="../documentation-css/git-documentation.css" />
-    <title>Tasty Git | Git Get Started</title>
+    <title>Tasty Git | GitHub Introduction</title>
   </head>
   <body>
     <nav class="top-nav bg-light">
@@ -61,22 +61,12 @@
         <hr />
         <span class="lesson-title">Git and GitHub</span>
         <a class="nav-lessons" href="./github-intro.html">GitHub Get Started</a>
-        <a class="nav-lessons" href="./git-pull-from-github.html"
-          >Git Pull grom HitHub</a
-        >
-        <a class="nav-lessons" href="./git-push-to-github.html"
-          >Push to GitHub</a
-        >
-        <a class="nav-lessons" href="./git-branch-github.html">GitHub Branch</a>
-        <a class="nav-lessons" href="./pull-branch-from-github.html"
-          >Pull Branch from GitHub</a
-        >
-        <a class="nav-lessons" href="./push-branch-to-github.html"
-          >Push Branch to GitHub</a
-        >
-        <a class="nav-lessons" href="./github-flow.html"
-          >GitHub Flow</a
-        >
+        <a class="nav-lessons" href="#">GitHub Edit Code</a>
+        <a class="nav-lessons" href="#">Pull from GitHub</a>
+        <a class="nav-lessons" href="#">Push to GitHub</a>
+        <a class="nav-lessons" href="#">GitHub Branch</a>
+        <a class="nav-lessons" href="#">Pull Branch from GitHub</a>
+        <a class="nav-lessons" href="#">Push Branch to GitHub</a>
         <a class="nav-lessons" href="#">GitHub Pages</a>
         <hr />
         <span class="lesson-title">Git Contribute</span>
@@ -122,37 +112,90 @@
           </ul>
         </div>
         <hr />
-        <h2 class="main-title">Let's get started with Git!</h2>
-        <p class="git-lesson-title fs-5">Installing Git</p>
+
+        <!-- main content starts here -->
+        <h2 class="main-title">Pulling a Branch from GitHub</h2>
+        <p class="git-lesson-title fs-5">Pulling a Branch from GitHub</p>
         <p>
-          Before you can start using Git, first you have to install it. You can
-          download Git for free from the following website:
-          <a href="https://www.git-scm.com/"> https://www.git-scm.com/</a>
+          Now continue working on our new branch in our local Git. Lets pull
+          from our GitHub repository again so that our code is up-to-date:
         </p>
-        <p class="git-lesson-title fs-5">Using Git with Command Line</p>
+        <div class="example-code">
+          $ git pull <br />
+          remote: Enumerating objects: 5, done. <br />
+          remote: Counting objects: 100% (5/5), done. <br />
+          remote: Compressing objects: 100% (3/3), done. <br />
+          remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 <br />
+          Unpacking objects: 100% (3/3), 851 bytes | 9.00 KiB/s, done. <br />
+          From https://github.com/LightLotus/tasty-git.git <br />
+          &emsp;* [new branch] html-hellow-world -> origin/html-new-branch
+          <br />
+          Already up to date. <br />
+        </div>
+        <br />
         <p>
-          Open a terminal and verify the installation was successful by typing
-          git --version:
+          Now our main branch is up todate. And we can see that there is a new
+          branch available on GitHub. Do a quick status check:
         </p>
-        <p class="example-code">$ git --version</p>
-        <p>It will display what version you are currently installed.</p>
-        <p class="example-code">git version 2.36.1.windows.1</p>
+        <div class="example-code">
+          $ git status <br />
+          On branch master <br />
+          Your branch is up to date with 'origin/master'. <br />
+          <br />
+          nothing to commit, working tree clean <br />
+        </div>
+        <br />
         <p>
-          Configure your Git username and email using the following commands,
-          replacing Kevin's name with your own. Your email should be the same
-          when registering to GitHub. These details will be associated with any
-          commits that you create:
+          And confirm which branches we have, and where we are working at the
+          moment:
         </p>
-        <p class="example-code">
-          $ git config --global user.name "Kevin Wines"
+        <div class="example-code">
+          $ git branch <br />
+          * master <br />
+        </div>
+        <p>
+          So, we do not have the new branch on our local Git. But we know it is
+          available on GitHub. So we can use the -a option to see all local and
+          remote branches:
         </p>
-        <p class="example-code">
-          $ git config --global user.email "kevinwines1234@gmail.com"
-        </p>
+        <div class="example-code">
+          $ git branch -a <br />
+          * master <br />
+          &emsp;remotes/origin/html-skeleton <br />
+          &emsp;remotes/origin/master <br />
+        </div>
+        <br />
         <p class="note-content">
-          <strong>Note:</strong> "--global" is used to set your username and
-          user email globally. Meaning everytime you create a repository, it
-          will serve as the default username and email.
+          <strong>Note:</strong> branch -r is for remote branches only.
+        </p>
+        <p>
+          We see that the branch html-skeleton is available remotely, but not on
+          our local git. Lets check it out:
+        </p>
+        <div class="example-code">
+          $ git checkout html-new-branch <br />
+          Switched to a new branch 'html-new-branch' <br />
+          Branch 'html-new-branch' set up to track remote branch
+          'html-new-branch' from 'origin'. <br />
+        </div>
+        <br />
+        <p>And check if it is all up to date:</p>
+        <div class="example-code">
+          git pull <br />
+          Already up to date. <br />
+        </div>
+        <br />
+        <p>Which branches do we have now, and where are we working from?</p>
+        <div class="example-code">
+          git branch <br />
+          * html-new-branch <br />
+          &emsp;master <br />
+        </div>
+        <br />
+        <p>
+          Now, open your favourite editor and confirm that the changes from the
+          GitHub branch carried over. That is how you pull a GitHub branch to
+          your local Git.
         </p>
       </div>
     </main>
