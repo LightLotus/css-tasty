@@ -131,6 +131,12 @@ iframe {
   width: 50vw;
 }
 
+.warning-content {
+  padding: 2rem;
+  background-color: #f64f5a89;
+  width: 50vw;
+}
+
 .command-terms {
   font-family: "Roboto Mono", monospace;
   color: #12c2e9;

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../documentation-css/git-documentation.css" />
+    <title>Tasty Git | GitHub Clone</title>
+  </head>
+  <body>
+    <nav class="top-nav bg-light">
+      <div class="nav-container container p-0">
+        <a href="../index.html"
+          ><img id="css-tasty-logo" src="../images/CSS-Tasty-logo.svg" alt=""
+        /></a>
+        <span
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseWidthExample"
+          aria-expanded="false"
+          aria-controls="collapseWidthExample"
+          ><i class="fa-solid fa-bars"></i
+        ></span>
+      </div>
+    </nav>
+    <div class="collapse collapse-horizontal" id="collapseWidthExample">
+      <div class="lesson-items overflow-auto">
+        <span class="lesson-title">Git Tutorial</span>
+        <a class="nav-lessons" href="../docs.html">Git Intro</a>
+        <a class="nav-lessons" href="./git-install.html"
+          >Git How to Install</a
+        >
+        <a class="nav-lessons" href="./git-repository.html"
+          >Git Repository</a
+        >
+        <a class="nav-lessons" href="./git-staging.html"
+          >Git Staging Environment</a
+        >
+        <a class="nav-lessons" href="./git-commit.html"
+          >Git Commit</a
+        >
+        <a class="nav-lessons" href="./git-branch.html"
+          >Git Branch</a
+        >
+        <a class="nav-lessons" href="./git-branch-merge.html"
+          >Git Branch Merge</a
+        >
+        <hr />
+        <span class="lesson-title">Git and GitHub</span>
+        <a class="nav-lessons" href="./github-intro.html">GitHub Get Started</a>
+        <a class="nav-lessons" href="./git-pull-from-github.html"
+          >Git Pull grom HitHub</a
+        >
+        <a class="nav-lessons" href="./git-push-to-github.html"
+          >Push to GitHub</a
+        >
+        <a class="nav-lessons" href="./git-branch-github.html">GitHub Branch</a>
+        <a class="nav-lessons" href="./pull-branch-from-github.html"
+          >Pull Branch from GitHub</a
+        >
+        <a class="nav-lessons" href="./push-branch-to-github.html"
+          >Push Branch to GitHub</a
+        >
+        <a class="nav-lessons" href="./github-flow.html">GitHub Flow</a>
+        <a class="nav-lessons" href="./github-pages.html">GitHub Pages</a>
+        <hr />
+        <span class="lesson-title">Git Contribute</span>
+        <a class="nav-lessons" href="./github-fork.html">GitHub Fork</a>
+        <a class="nav-lessons" href="./git-clone.html">Git Clone from GitHub</a>
+        <a class="nav-lessons" href="./github-send-pull-request.html"
+          >GitHub Send Pull Request</a
+        >
+        <hr />
+        <span class="lesson-title">Git Advanced</span>
+        <a class="nav-lessons" href="./git-gitignore.html">Git .gitignore</a>
+        <a class="nav-lessons" href="./security-ssh.html">Git Security SSH</a>
+        <a class="nav-lessons" href="./github-add-ssh.html">GitHub Add SSH</a>
+        <span class="lesson-title">Git Undo</span>
+        <a class="nav-lessons" href="./git-revert.html">Git Revert</a>
+        <a class="nav-lessons" href="./git-reset.html">Git Reset</a>
+        <a class="nav-lessons" href="./git-ammend.html">Git Ammend</a>
+        <hr />
+        <span class="lesson-title">References</span>
+        <a class="nav-lessons" href="./references.html"
+          >Git Command References</a
+        >
+      </div>
+    </div>
+    <main>
+      <div class="main-content container p-0">
+        <div class="dropdown">
+          <button
+            class="btn dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Menu
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="../index.html">Home</a></li>
+            <li><a class="dropdown-item" href="../guides.html">Guides</a></li>
+            <li>
+              <a class="dropdown-item" href="../references.html"
+                >Git Refences</a
+              >
+            </li>
+          </ul>
+        </div>
+        <hr />
+
+        <!-- main content starts here -->
+        <h2 class="main-title">Git Ignore and .gitignore</h2>
+        <p class="git-lesson-title fs-5">Git Ignore</p>
+        <p>
+          When sharing your code with others, there are often files or parts of
+          your project, you do not want to share.
+        </p>
+        <p>Examples</p>
+        <ul>
+          <li>log files</li>
+          <li>temporary files</li>
+          <li>hidden files</li>
+          <li>personal files</li>
+          <li>etc.</li>
+        </ul>
+        <p>
+          Git can specify which files or parts of your project should be ignored
+          by Git using a .gitignore file.
+        </p>
+        <p>
+          Git will not track files and folders specified in .gitignore. However,
+          the .gitignore file itself IS tracked by Git.
+        </p>
+        <hr />
+        <p class="git-lesson-title fs-5">Create .gitignore</p>
+        <p>
+          To create a .gitignore file, go to the root of your local Git, and
+          create it:
+        </p>
+        <div class="example-code">touch .gitignore</div>
+        <br />
+        <p>Now open the file using a text editor.</p>
+        <p>We are just going to add two simple rules:</p>
+
+        <ul>
+          <li>Ignore any files with the .log extension</li>
+          <li>Ignore everything in any directory named temp</li>
+        </ul>
+        <div class="example-code">
+          # ignore ALL .log files <br />
+          *.log <br />
+          <br />
+          # ignore ALL files in ANY directory named temp <br />
+          temp/ <br />
+        </div>
+        <p>
+          Now all .log files and anything in temp folders will be ignored by
+          Git.
+        </p>
+        <p class="note-content">
+          <strong>Note: </strong> In this case, we use a single .gitignore which
+          applies to the entire repository.
+
+          <br />
+          It is also possible to have additional .gitignore files in
+          subdirectories. These only apply to files or folders within that
+          directory.
+        </p>
+        <hr />
+        <p class="git-lesson-title fs-5">Local and Personal Git Ignore Rules</p>
+        <p>
+          It is also possible to ignore files or folders but not show it in the
+          distubuted .gitignore file.
+        </p>
+        <p>
+          These kinds of ignores are specified in the .git/info/exclude file. It
+          works the same way as .gitignore but are not shown to anyone else.
+        </p>
+      </div>
+    </main>
+    <footer>
+      <div class="container p-0 py-5">
+        <div class="row p-0">
+          <div class="col-md-6">
+            <a href="../index.html"
+              ><img
+                id="css-tasty-logo"
+                src="../images/CSS-Tasty-logo.svg"
+                alt=""
+            /></a>
+          </div>
+          <div class="col-md-6">
+            <div class="footer-nav d-flex justify-content-between ms-auto">
+              <a class="footer-nav-links" href="../index.html">Home</a>
+              <a class="footer-nav-links" href="../docs.html">Docs</a>
+              <a class="footer-nav-links" href="../references.html"
+                >Git Refences</a
+              >
+              <a class="footer-nav-links" href="../guides.html">Guides</a>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3 p-0">
+          <div class="col-md-6">
+            <div class="footer-social-media d-flex justify-content-between">
+              <a class="footer-social-media-icons" href="#"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a class="footer-social-media-icons" href="#"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a class="footer-social-media-icons" href="#"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a class="footer-social-media-icons" href="#"
+                ><i class="fa-brands fa-discord"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex justify-content-end">
+              <div id="copyright">©2022 CSS.Candy. All Rights Reserved</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
