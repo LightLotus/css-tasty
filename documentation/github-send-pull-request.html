@@ -18,7 +18,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="../documentation-css/git-documentation.css" />
-    <title>Tasty Git | Git Get Started</title>
+    <title>Tasty Git | GitHub Clone</title>
   </head>
   <body>
     <nav class="top-nav bg-light">
@@ -80,7 +80,7 @@
         <span class="lesson-title">Git Contribute</span>
         <a class="nav-lessons" href="./github-fork.html">GitHub Fork</a>
         <a class="nav-lessons" href="./git-clone.html">Git Clone from GitHub</a>
-        <a class="nav-lessons" href="./github-send-pull-request.html">GitHub Send Pull Request</a>
+        <a class="nav-lessons" href="#">GitHub Send Pull Request</a>
         <hr />
         <span class="lesson-title">Git Advanced</span>
         <a class="nav-lessons" href="#">Git .gitignore</a>
@@ -120,38 +120,34 @@
           </ul>
         </div>
         <hr />
-        <h2 class="main-title">Let's get started with Git!</h2>
-        <p class="git-lesson-title fs-5">Installing Git</p>
+        <h2 class="main-title">Git GitHub Send Pull Request</h2>
+        <p class="git-lesson-title fs-5">Push Changes to Our GitHub Fork</p>
+        <p>We have made a lot of changes to our local Git.</p>
+        <p>Now we push them to our GitHub fork:</p>
+        <p>commit the changes:</p>
+        <div class="example-code">
+          git push origin Enumerating objects: 8, done. <br />
+          Counting objects: 100% (8/8), done. <br />
+          Delta compression using up to 16 threads <br />
+          Compressing objects: 100% (5/5), done. <br />
+          Writing objects: 100% (5/5), 393.96 KiB | 32.83 MiB/s, done. <br />
+          Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 <br />
+          To https://github.com/kaijim/w3schools-test.github.io.git <br />
+          &emsp;facaeae..ebb1a5c master -> master <br />
+        </div>
+        <br />
         <p>
-          Before you can start using Git, first you have to install it. You can
-          download Git for free from the following website:
-          <a href="https://www.git-scm.com/"> https://www.git-scm.com/</a>
+          Go to GitHub, and we see that the repository has a new commit. And we
+          can send a Pull Request to the original repository:
         </p>
-        <p class="git-lesson-title fs-5">Using Git with Command Line</p>
-        <p>
-          Open a terminal and verify the installation was successful by typing
-          git --version:
-        </p>
-        <p class="example-code">$ git --version</p>
-        <p>It will display what version you are currently installed.</p>
-        <p class="example-code">git version 2.36.1.windows.1</p>
-        <p>
-          Configure your Git username and email using the following commands,
-          replacing Kevin's name with your own. Your email should be the same
-          when registering to GitHub. These details will be associated with any
-          commits that you create:
-        </p>
-        <p class="example-code">
-          $ git config --global user.name "Kevin Wines"
-        </p>
-        <p class="example-code">
-          $ git config --global user.email "kevinwines1234@gmail.com"
-        </p>
-        <p class="note-content">
-          <strong>Note:</strong> "--global" is used to set your username and
-          user email globally. Meaning everytime you create a repository, it
-          will serve as the default username and email.
-        </p>
+        <img
+          src="../images/github-send-pull-request.png"
+          alt=""
+          class="w-100"
+        />
+        <hr>
+        <p>Click that and create a pull request:</p>
+        <img src="../images/github-send-pull-request-1.png" alt="" class="w-100">
       </div>
     </main>
     <footer>

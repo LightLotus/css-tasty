@@ -18,7 +18,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="../documentation-css/git-documentation.css" />
-    <title>Tasty Git | Git Get Started</title>
+    <title>Tasty Git | GitHub Introduction</title>
   </head>
   <body>
     <nav class="top-nav bg-light">
@@ -61,26 +61,18 @@
         <hr />
         <span class="lesson-title">Git and GitHub</span>
         <a class="nav-lessons" href="./github-intro.html">GitHub Get Started</a>
-        <a class="nav-lessons" href="./git-pull-from-github.html"
-          >Git Pull grom HitHub</a
-        >
-        <a class="nav-lessons" href="./git-push-to-github.html"
-          >Push to GitHub</a
-        >
-        <a class="nav-lessons" href="./git-branch-github.html">GitHub Branch</a>
-        <a class="nav-lessons" href="./pull-branch-from-github.html"
-          >Pull Branch from GitHub</a
-        >
-        <a class="nav-lessons" href="./push-branch-to-github.html"
-          >Push Branch to GitHub</a
-        >
-        <a class="nav-lessons" href="./github-flow.html">GitHub Flow</a>
-        <a class="nav-lessons" href="./github-pages.html">GitHub Pages</a>
+        <a class="nav-lessons" href="#">GitHub Edit Code</a>
+        <a class="nav-lessons" href="#">Pull from GitHub</a>
+        <a class="nav-lessons" href="#">Push to GitHub</a>
+        <a class="nav-lessons" href="#">GitHub Branch</a>
+        <a class="nav-lessons" href="#">Pull Branch from GitHub</a>
+        <a class="nav-lessons" href="#">Push Branch to GitHub</a>
+        <a class="nav-lessons" href="#">GitHub Pages</a>
         <hr />
         <span class="lesson-title">Git Contribute</span>
-        <a class="nav-lessons" href="./github-fork.html">GitHub Fork</a>
-        <a class="nav-lessons" href="./git-clone.html">Git Clone from GitHub</a>
-        <a class="nav-lessons" href="./github-send-pull-request.html">GitHub Send Pull Request</a>
+        <a class="nav-lessons" href="#">GitHub Fork</a>
+        <a class="nav-lessons" href="#">Git Clone from GitHub</a>
+        <a class="nav-lessons" href="#">GitHub Send Pull Request</a>
         <hr />
         <span class="lesson-title">Git Advanced</span>
         <a class="nav-lessons" href="#">Git .gitignore</a>
@@ -120,37 +112,46 @@
           </ul>
         </div>
         <hr />
-        <h2 class="main-title">Let's get started with Git!</h2>
-        <p class="git-lesson-title fs-5">Installing Git</p>
+
+        <!-- main content starts here -->
+        <h2 class="main-title">Working with Forks</h2>
+        <p class="git-lesson-title fs-5">About Fork</p>
         <p>
-          Before you can start using Git, first you have to install it. You can
-          download Git for free from the following website:
-          <a href="https://www.git-scm.com/"> https://www.git-scm.com/</a>
+          A <span class="reference-links">fork</span> is a copy of a repository
+          that you manage. Forks let you make changes to a project without
+          affecting the original repository. You can fetch updates from or
+          submit changes to the original repository with pull requests.
         </p>
-        <p class="git-lesson-title fs-5">Using Git with Command Line</p>
         <p>
-          Open a terminal and verify the installation was successful by typing
-          git --version:
+          <span class="reference-links">Forking</span> a repository is similar to copying a repository,
+          with two major differences:
         </p>
-        <p class="example-code">$ git --version</p>
-        <p>It will display what version you are currently installed.</p>
-        <p class="example-code">git version 2.36.1.windows.1</p>
+        <ul>
+          <li>
+            You can use a pull request to suggest changes from your user-owned
+            fork to the original repository in its GitHub instance, also known
+            as the upstream repository.
+          </li>
+          <li>
+            You can bring changes from the upstream repository to your local
+            fork by synchronizing your fork with the upstream repository.
+          </li>
+        </ul>
         <p>
-          Configure your Git username and email using the following commands,
-          replacing Kevin's name with your own. Your email should be the same
-          when registering to GitHub. These details will be associated with any
-          commits that you create:
+          If you have access to a private repository and the owner permits
+          forking, you can fork the repository to your personal account, or an
+          organization on GitHub Team where you have repository creation
+          permissions.
         </p>
-        <p class="example-code">
-          $ git config --global user.name "Kevin Wines"
+        <p>
+          You cannot fork a private repository to an organization using GitHub
+          Free.
         </p>
-        <p class="example-code">
-          $ git config --global user.email "kevinwines1234@gmail.com"
-        </p>
-        <p class="note-content">
-          <strong>Note:</strong> "--global" is used to set your username and
-          user email globally. Meaning everytime you create a repository, it
-          will serve as the default username and email.
+        <p>
+          Deleting a fork will not delete the original upstream repository. You
+          can make any changes you want to your fork—add collaborators, rename
+          files, generate GitHub Pages—with no effect on the original. You
+          cannot restore a deleted forked repository.
         </p>
       </div>
     </main>

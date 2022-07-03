@@ -18,7 +18,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="../documentation-css/git-documentation.css" />
-    <title>Tasty Git | Git Get Started</title>
+    <title>Tasty Git | GitHub Clone</title>
   </head>
   <body>
     <nav class="top-nav bg-light">
@@ -80,7 +80,7 @@
         <span class="lesson-title">Git Contribute</span>
         <a class="nav-lessons" href="./github-fork.html">GitHub Fork</a>
         <a class="nav-lessons" href="./git-clone.html">Git Clone from GitHub</a>
-        <a class="nav-lessons" href="./github-send-pull-request.html">GitHub Send Pull Request</a>
+        <a class="nav-lessons" href="#">GitHub Send Pull Request</a>
         <hr />
         <span class="lesson-title">Git Advanced</span>
         <a class="nav-lessons" href="#">Git .gitignore</a>
@@ -120,38 +120,55 @@
           </ul>
         </div>
         <hr />
-        <h2 class="main-title">Let's get started with Git!</h2>
-        <p class="git-lesson-title fs-5">Installing Git</p>
+        <h2 class="main-title">Cloning a repository</h2>
+        <p class="git-lesson-title fs-5">About cloning a repository</p>
         <p>
-          Before you can start using Git, first you have to install it. You can
-          download Git for free from the following website:
-          <a href="https://www.git-scm.com/"> https://www.git-scm.com/</a>
+          When you create a repository on GitHub.com, it exists as a remote
+          repository. You can clone your repository to create a local copy on
+          your computer and sync between the two locations.
         </p>
-        <p class="git-lesson-title fs-5">Using Git with Command Line</p>
+        <p class="git-lesson-title fs-5">About cloning a repository</p>
         <p>
-          Open a terminal and verify the installation was successful by typing
-          git --version:
+          You can clone a repository from GitHub.com to your local computer to
+          make it easier to fix merge conflicts, add or remove files, and push
+          larger commits.
         </p>
-        <p class="example-code">$ git --version</p>
-        <p>It will display what version you are currently installed.</p>
-        <p class="example-code">git version 2.36.1.windows.1</p>
         <p>
-          Configure your Git username and email using the following commands,
-          replacing Kevin's name with your own. Your email should be the same
-          when registering to GitHub. These details will be associated with any
-          commits that you create:
+          When you clone a repository, you copy the repository from GitHub.com
+          to your local machine.
         </p>
-        <p class="example-code">
-          $ git config --global user.name "Kevin Wines"
+        <p>
+          Move back to the original repository, and click the green "Code"
+          button to get the URL to clone:
         </p>
-        <p class="example-code">
-          $ git config --global user.email "kevinwines1234@gmail.com"
+        <img
+          src="../images/github-cloing-a-repository.png"
+          alt=""
+          class="w-100"
+        />
+        <hr />
+        <p>Open your Git bash and clone the repository:</p>
+        <div class="example-code">
+          $ git clone https://github.com/LightLotus/tasty-git.git <br />
+          Cloning into 'tasty-git.github.io'... <br />
+          remote: Enumerating objects: 33, done. <br />
+          remote: Counting objects: 100% (33/33), done. <br />
+          remote: Compressing objects: 100% (15/15), done. <br />
+          remote: Total 33 (delta 18), reused 33 (delta 18), pack-reused 0
+          <br />
+          Receiving objects: 100% (33/33), 94.79 KiB | 3.16 MiB/s, done. <br />
+          Resolving deltas: 100% (18/18), done. <br />
+        </div>
+        <br />
+        <p>
+          Take a look in your file system, and you will see a new directory
+          named after the cloned project:
         </p>
-        <p class="note-content">
-          <strong>Note:</strong> "--global" is used to set your username and
-          user email globally. Meaning everytime you create a repository, it
-          will serve as the default username and email.
-        </p>
+        <div class="example-code">
+          ls <br />
+          tasty-git.github.io/ <br />
+        </div>
+        <br />
       </div>
     </main>
     <footer>
