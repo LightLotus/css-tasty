@@ -8,6 +8,7 @@
 
 section {
   background-image: linear-gradient(to right, #12c2e9, #c471ed);
+  height: 120vh;
 }
 
 #css-tasty-logo {
